@@ -34,10 +34,6 @@ public class PlayerController : MonoBehaviour
 
             if(!attacking)
             {
-                 //Vector3 movement =  new Vector3(Input.GetAxisRaw("Horizontal") , 
-                //                            Input.GetAxisRaw("Vertical") , 0f);
-                //transform.position = transform.position + movement * Time.deltaTime * moveSpeed;
-
                 myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, 
                                                     Input.GetAxisRaw("Vertical") * moveSpeed);
                 if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0){
@@ -45,7 +41,6 @@ public class PlayerController : MonoBehaviour
                 }else{
                     lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
                 }
-
                 if(Input.GetKeyDown(KeyCode.J))
                 {
                     attackTimeCounter = attackTime;
@@ -66,9 +61,11 @@ public class PlayerController : MonoBehaviour
        
             anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
             anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
-            anim.SetBool("PlayerMoving", playerMoving);
+            
             anim.SetFloat("LastMoveX", lastMove.x);
             anim.SetFloat("LastMoveY", lastMove.y);
         }
+
+        anim.SetBool("PlayerMoving", playerMoving);
     }
 }
