@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private bool playerMoving;
     private Vector2 lastMove;
     private Rigidbody2D myRigidbody;
+    public bool isInputEnabled = false;
+    public bool canBeDamaged = false;
 
     private bool attacking;
     public float attackTime;
@@ -23,44 +25,47 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        playerMoving =  true;
-
-        if(!attacking)
+        if(isInputEnabled)
         {
-             //Vector3 movement =  new Vector3(Input.GetAxisRaw("Horizontal") , 
-            //                            Input.GetAxisRaw("Vertical") , 0f);
-            //transform.position = transform.position + movement * Time.deltaTime * moveSpeed;
+            playerMoving =  true;
 
-            myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, 
-                                                Input.GetAxisRaw("Vertical") * moveSpeed);
-            if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0){
-                playerMoving =  false;
-            }else{
-                lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            }
-
-            if(Input.GetKeyDown(KeyCode.J))
+            if(!attacking)
             {
-                attackTimeCounter = attackTime;
-                attacking =  true;
-                myRigidbody.velocity = Vector2.zero;
-                anim.SetBool("PlayerAttacking", true);
-            }
-        }
+                 //Vector3 movement =  new Vector3(Input.GetAxisRaw("Horizontal") , 
+                //                            Input.GetAxisRaw("Vertical") , 0f);
+                //transform.position = transform.position + movement * Time.deltaTime * moveSpeed;
 
-        if(attackTimeCounter > 0){
-            attackTimeCounter -= Time.deltaTime;
-        }
+                myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, 
+                                                    Input.GetAxisRaw("Vertical") * moveSpeed);
+                if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0){
+                    playerMoving =  false;
+                }else{
+                    lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+                }
+
+                if(Input.GetKeyDown(KeyCode.J))
+                {
+                    attackTimeCounter = attackTime;
+                    attacking =  true;
+                    myRigidbody.velocity = Vector2.zero;
+                    anim.SetBool("PlayerAttacking", true);
+                }
+            }
+
+            if(attackTimeCounter > 0){
+                attackTimeCounter -= Time.deltaTime;
+            }
         
-        if(attackTimeCounter <= 0){
-            attacking =  false;
-             anim.SetBool("PlayerAttacking", false);
-        }
+            if(attackTimeCounter <= 0){
+                attacking =  false;
+                 anim.SetBool("PlayerAttacking", false);
+            }
        
-        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-        anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
-        anim.SetBool("PlayerMoving", playerMoving);
-        anim.SetFloat("LastMoveX", lastMove.x);
-        anim.SetFloat("LastMoveY", lastMove.y);
+            anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+            anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+            anim.SetBool("PlayerMoving", playerMoving);
+            anim.SetFloat("LastMoveX", lastMove.x);
+            anim.SetFloat("LastMoveY", lastMove.y);
+        }
     }
 }
