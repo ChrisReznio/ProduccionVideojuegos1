@@ -25,7 +25,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if(isInputEnabled)
+        myRigidbody.velocity = Vector2.zero;
+        playerMoving = false;
+
+        if (isInputEnabled)
         {
             playerMoving =  true;
 

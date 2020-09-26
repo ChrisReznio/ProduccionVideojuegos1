@@ -30,7 +30,7 @@ public class SwitchToSoul : MonoBehaviour
         soul.GetComponent<SoulController>().IsInputEnabled = true;
         
 
-        soul.transform.position = theController.transform.position+new Vector3(1,1,0);
+        soul.transform.position = theController.transform.position+new Vector3(2,2,0);
 
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         camera.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
