@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class SwitchToPlayer : MonoBehaviour
 {
-    PlayerController pc;
+    private GameObject soul;
+    private GameObject player;
+    private GameObject cam;
+    private GameObject hitbox;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        soul = GameObject.FindGameObjectWithTag("Soul");
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        hitbox = GameObject.FindGameObjectWithTag("SoulBox");
     }
 
     // Update is called once per frame
@@ -19,16 +25,13 @@ public class SwitchToPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !soul.GetComponent<SoulController>().canDealDamage)
         {
-            GameObject theController = GameObject.FindGameObjectWithTag("Player");
-            theController.GetComponent<PlayerController>().isInputEnabled = true;
-            theController.GetComponent<PlayerController>().canBeDamaged = true;
+            player.GetComponent<PlayerController>().isInputEnabled = true;
+            player.GetComponent<PlayerController>().canBeDamaged = true;
 
-            GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
-            camera.GetComponent<CameraController>().followTarget = GameObject.Find("Player");
+            cam.GetComponent<CameraController>().followTarget = GameObject.Find("Player");
 
-            GameObject soul = GameObject.FindGameObjectWithTag("Soul");
             soul.GetComponent<SoulController>().IsInputEnabled = false;
 
             soul.transform.localScale = new Vector3(0, 0, 0);

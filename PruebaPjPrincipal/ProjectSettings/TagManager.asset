@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Soul
+  - SoulBox
   layers:
   - Default
   - TransparentFX

@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class SwitchToSoul : MonoBehaviour
 {
+    private GameObject soul;
+    private GameObject player;
+    private GameObject cam;
+    private GameObject hitbox;
     // Start is called before the first frame update
     void Start()
     {
-        
+       player = GameObject.FindGameObjectWithTag("Player");
+       soul   = GameObject.FindGameObjectWithTag("Soul");
+       cam = GameObject.FindGameObjectWithTag("MainCamera");
+       hitbox = GameObject.FindGameObjectWithTag("SoulBox");
     }
 
     // Update is called once per frame
@@ -15,47 +22,58 @@ public class SwitchToSoul : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X)) 
         {
-            SwitchSoul();
+
+            if (player.GetComponent<PlayerController>().isInputEnabled)
+            {
+                SwitchSoulOnCommand();
+            }
+            else 
+            {
+                SwitchSoulOnCommand();
+                soul.transform.position = player.transform.position + new Vector3(0, 0, 0);
+            }
+            
         }
     }
 
-    void SwitchSoul() 
+    public void SwitchSoulPeriodic()
     {
-        GameObject theController = GameObject.FindGameObjectWithTag("Player");
-        theController.GetComponent<PlayerController>().isInputEnabled = false;
-
-        GameObject soul = GameObject.FindGameObjectWithTag("Soul");
-
-        soul.transform.localScale = new Vector3(1, 1, 0);
-        soul.GetComponent<SoulController>().IsInputEnabled = true;
-        
-
-        soul.transform.position = theController.transform.position+new Vector3(2,2,0);
-
-        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
-        camera.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
+        SwitchSoulOnCommand();
+        soul.GetComponent<SoulController>().canDealDamage = true;
     }
 
-    public void SwitchToSoulAfterDeath() 
+    public void SwitchSoulOnCommand() 
     {
-        GameObject theController = GameObject.FindGameObjectWithTag("Player");
-        theController.GetComponent<PlayerController>().isInputEnabled = false;
-        theController.GetComponent<PlayerController>().canBeDamaged = false;
+        player.GetComponent<PlayerController>().isInputEnabled = false;
 
-        GameObject soul = GameObject.FindGameObjectWithTag("Soul");
         soul.transform.localScale = new Vector3(1, 1, 0);
         soul.GetComponent<SoulController>().IsInputEnabled = true;
+        soul.GetComponent<SoulController>().canDealDamage = false;
+        
+        soul.transform.position = player.transform.position+new Vector3(2,2,0);
 
-        soul.transform.position = theController.transform.position + new Vector3(2, 2, 0);
+        cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
-        GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
-        camera.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
+    }
+
+    
+    public void SwitchToSoulAfterDeath() 
+    {
+        player.GetComponent<PlayerController>().isInputEnabled = false;
+        player.GetComponent<PlayerController>().canBeDamaged = false;
+
+        soul.transform.localScale = new Vector3(1, 1, 0);
+        soul.GetComponent<SoulController>().IsInputEnabled = true;
+        soul.GetComponent<SoulController>().canDealDamage = false;
+
+        soul.transform.position = player.transform.position + new Vector3(2, 2, 0);
+
+        cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
         RespawnPlayer();
     }
 
     void RespawnPlayer() {
-        GameObject theController = GameObject.FindGameObjectWithTag("Player");
-        theController.GetComponent<RespawnController>().Respawn();
+        player.GetComponent<RespawnController>().Respawn();
     }
 }

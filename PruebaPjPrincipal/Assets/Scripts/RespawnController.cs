@@ -21,7 +21,10 @@ public class RespawnController : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
 
-        PlayerHealthManager pc = player.GetComponent<PlayerHealthManager>();
-        pc.currentHealth = pc.maxHealth;
+        PlayerHealthManager phm = player.GetComponent<PlayerHealthManager>();
+        phm.currentHealth = phm.maxHealth;
+
+        PlayerDetachController pdc = player.GetComponent<PlayerDetachController>();
+        pdc.ResetAll();
     }
 }

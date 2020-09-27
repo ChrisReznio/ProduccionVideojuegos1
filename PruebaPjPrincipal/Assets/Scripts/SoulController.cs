@@ -7,6 +7,7 @@ public class SoulController : MonoBehaviour
     public Animator animator;
     public float moveSpeed = 5f;
     public bool IsInputEnabled = true;
+    public bool canDealDamage = false;
 
     void Update()
     {
