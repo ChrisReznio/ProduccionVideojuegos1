@@ -7,14 +7,12 @@ public class SwitchToSoul : MonoBehaviour
     private GameObject soul;
     private GameObject player;
     private GameObject cam;
-    private GameObject hitbox;
     // Start is called before the first frame update
     void Start()
     {
        player = GameObject.FindGameObjectWithTag("Player");
        soul   = GameObject.FindGameObjectWithTag("Soul");
        cam = GameObject.FindGameObjectWithTag("MainCamera");
-       hitbox = GameObject.FindGameObjectWithTag("SoulBox");
     }
 
     // Update is called once per frame

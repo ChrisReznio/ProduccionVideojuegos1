@@ -5357,7 +5357,7 @@ MonoBehaviour:
   detachTimer: {fileID: 1839272169}
   detachText: {fileID: 447716880}
   reattachTimer: {fileID: 810530273}
-  reattachText: {fileID: 0}
+  reattachText: {fileID: 6763976}
   pdc: {fileID: 0}
 --- !u!1 &1217157242
 GameObject:

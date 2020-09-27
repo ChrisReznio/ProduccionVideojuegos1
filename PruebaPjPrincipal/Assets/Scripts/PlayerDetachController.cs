@@ -35,14 +35,18 @@ public class PlayerDetachController : MonoBehaviour
             currentCounter = 0;
             player.GetComponent<SwitchToSoul>().SwitchSoulPeriodic();
         }
-        if (soul.GetComponent<SoulController>().canDealDamage) 
+        if (player.GetComponent<PlayerController>().canBeDamaged) 
         {
-            detachedRunCounter++;
-        }
-        if (detachedRunCounter == detachedReturnThreshold) {
-            player.GetComponent<SwitchToSoul>().SwitchSoulOnCommand();
-            soul.transform.position = player.transform.position + new Vector3(0, 0, 0);
-            detachedRunCounter = 0;
+            if (soul.GetComponent<SoulController>().canDealDamage)
+            {
+                detachedRunCounter++;
+            }
+            if (detachedRunCounter == detachedReturnThreshold)
+            {
+                player.GetComponent<SwitchToSoul>().SwitchSoulOnCommand();
+                soul.transform.position = player.transform.position + new Vector3(0, 0, 0);
+                detachedRunCounter = 0;
+            }
         }
     }
 
