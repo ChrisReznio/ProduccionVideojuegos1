@@ -1,0 +1,646 @@
+fileFormatVersion: 2
+guid: 65fcc9c824e62ae4c979246084baa7e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7199540442557683637
+    second: Enemy-Melee-Idle-S_0
+  - first:
+      213: -7418410282394654007
+    second: Enemy-Melee-Idle-S_1
+  - first:
+      213: -9208313458375451893
+    second: Enemy-Melee-Idle-S_2
+  - first:
+      213: -8414403823063225106
+    second: Enemy-Melee-Idle-S_3
+  - first:
+      213: 5240314336025463003
+    second: Enemy-Melee-Idle-S_4
+  - first:
+      213: -7270881051157818938
+    second: Enemy-Melee-Idle-S_5
+  - first:
+      213: 8186483810300471235
+    second: Enemy-Melee-Idle-S_6
+  - first:
+      213: -3238924472049017653
+    second: Enemy-Melee-Idle-S_7
+  - first:
+      213: -1602346511615151218
+    second: Enemy-Melee-Idle-S_8
+  - first:
+      213: 2245400886302573964
+    second: Enemy-Melee-Idle-S_9
+  - first:
+      213: -8091137081796726157
+    second: Enemy-Melee-Idle-S_10
+  - first:
+      213: -3462014433100906434
+    second: Enemy-Melee-Idle-S_11
+  - first:
+      213: 6808983580487055265
+    second: Enemy-Melee-Idle-S_12
+  - first:
+      213: 1662167548731417314
+    second: Enemy-Melee-Idle-S_13
+  - first:
+      213: 6403446308412747715
+    second: Enemy-Melee-Idle-S_14
+  - first:
+      213: -6690476981397162904
+    second: Enemy-Melee-Idle-S_15
+  - first:
+      213: -3258631655943202728
+    second: Enemy-Melee-Idle-S_16
+  - first:
+      213: -6198050653125236621
+    second: Enemy-Melee-Idle-S_17
+  - first:
+      213: 4399024795367378506
+    second: Enemy-Melee-Idle-S_18
+  - first:
+      213: -4530685693107730858
+    second: Enemy-Melee-Idle-S_19
+  - first:
+      213: 4729130906298317514
+    second: Enemy-Melee-Idle-S_20
+  - first:
+      213: 2866974168989704151
+    second: Enemy-Melee-Idle-S_21
+  - first:
+      213: 5033217072318285200
+    second: Enemy-Melee-Idle-S_22
+  - first:
+      213: -4439638372738966859
+    second: Enemy-Melee-Idle-S_23
+  - first:
+      213: 7829922317471032161
+    second: Enemy-Melee-Idle-S_24
+  - first:
+      213: 6883175816469621382
+    second: Enemy-Melee-Idle-S_25
+  - first:
+      213: 5425906542330945166
+    second: Enemy-Melee-Idle-S_26
+  - first:
+      213: -2894039814004712484
+    second: Enemy-Melee-Idle-S_27
+  - first:
+      213: -5479332611435488092
+    second: Enemy-Melee-Idle-S_28
+  - first:
+      213: 7243223609607453649
+    second: Enemy-Melee-Idle-S_29
+  - first:
+      213: 9077801339702962492
+    second: Enemy-Melee-Idle-S_30
+  - first:
+      213: 3910334236298277875
+    second: Enemy-Melee-Idle-S_31
+  - first:
+      213: -8112534506926038619
+    second: Enemy-Melee-Idle-S_32
+  - first:
+      213: -1059803447092309772
+    second: Enemy-Melee-Idle-S_33
+  - first:
+      213: 8178944595949659178
+    second: Enemy-Melee-Idle-S_34
+  - first:
+      213: -4398722729343429192
+    second: Enemy-Melee-Idle-S_35
+  - first:
+      213: -8274887353689572954
+    second: Enemy-Melee-Idle-S_36
+  - first:
+      213: 6758207631675489758
+    second: Enemy-Melee-Idle-S_37
+  - first:
+      213: -2608956304122990249
+    second: Enemy-Melee-Idle-S_38
+  - first:
+      213: -195505001496009058
+    second: Enemy-Melee-Idle-S_39
+  - first:
+      213: 2269058860200567263
+    second: Enemy-Melee-Idle-S_40
+  - first:
+      213: -503604826261431120
+    second: Enemy-Melee-Idle-S_41
+  - first:
+      213: 1782440909601588384
+    second: Enemy-Melee-Idle-S_42
+  - first:
+      213: -3285550395637925288
+    second: Enemy-Melee-Idle-S_43
+  - first:
+      213: -422305320287184734
+    second: Enemy-Melee-Idle-S_44
+  - first:
+      213: -3947476194697675507
+    second: Enemy-Melee-Idle-S_45
+  - first:
+      213: -8064396009307564960
+    second: Enemy-Melee-Idle-S_46
+  - first:
+      213: -4208027310809100474
+    second: Enemy-Melee-Idle-S_47
+  - first:
+      213: -431359549158513961
+    second: Enemy-Melee-Idle-S_48
+  - first:
+      213: -4863143535637915775
+    second: Enemy-Melee-Idle-S_49
+  - first:
+      213: 6570044404009465465
+    second: Enemy-Melee-Idle-S_50
+  - first:
+      213: 5713610045905676747
+    second: Enemy-Melee-Idle-S_51
+  - first:
+      213: 1412360643458472079
+    second: Enemy-Melee-Idle-S_52
+  - first:
+      213: 5621912167758163601
+    second: Enemy-Melee-Idle-S_53
+  - first:
+      213: -912165057765172609
+    second: Enemy-Melee-Idle-S_54
+  - first:
+      213: -5259333957392975043
+    second: Enemy-Melee-Idle-S_55
+  - first:
+      213: 8910669594282203253
+    second: Enemy-Melee-Idle-S_56
+  - first:
+      213: 5041581651321227717
+    second: Enemy-Melee-Idle-S_57
+  - first:
+      213: 2703331063579131105
+    second: Enemy-Melee-Idle-S_58
+  - first:
+      213: 183741455566439149
+    second: Enemy-Melee-Idle-S_59
+  - first:
+      213: 1200350404796135619
+    second: Enemy-Melee-Idle-S_60
+  - first:
+      213: -3730480052232397403
+    second: Enemy-Melee-Idle-S_61
+  - first:
+      213: -3269618087753940252
+    second: Enemy-Melee-Idle-S_62
+  - first:
+      213: -8365896317623050704
+    second: Enemy-Melee-Idle-S_63
+  - first:
+      213: -2731002175261980447
+    second: Enemy-Melee-Idle-S_64
+  - first:
+      213: 7316988632688323798
+    second: Enemy-Melee-Idle-S_65
+  - first:
+      213: 4933712220540635019
+    second: Enemy-Melee-Idle-S_66
+  - first:
+      213: -5135993585580957352
+    second: Enemy-Melee-Idle-S_67
+  - first:
+      213: 4029658566568128313
+    second: Enemy-Melee-Idle-S_68
+  - first:
+      213: -762602480826914741
+    second: Enemy-Melee-Idle-S_69
+  - first:
+      213: -6980942327808875418
+    second: Enemy-Melee-Idle-S_70
+  - first:
+      213: 6656792455344782260
+    second: Enemy-Melee-Idle-S_71
+  - first:
+      213: 399716241809716218
+    second: Enemy-Melee-Idle-S_72
+  - first:
+      213: -5240694297599029282
+    second: Enemy-Melee-Idle-S_73
+  - first:
+      213: 5983602757723785921
+    second: Enemy-Melee-Idle-S_74
+  - first:
+      213: 2798667791584517121
+    second: Enemy-Melee-Idle-S_75
+  - first:
+      213: 7509052589562455877
+    second: Enemy-Melee-Idle-S_76
+  - first:
+      213: 7840864439347318086
+    second: Enemy-Melee-Idle-S_77
+  - first:
+      213: 3074920423332974438
+    second: Enemy-Melee-Idle-S_78
+  - first:
+      213: -8848919193878773440
+    second: Enemy-Melee-Idle-S_79
+  - first:
+      213: 4873622995834782984
+    second: Enemy-Melee-Idle-S_80
+  - first:
+      213: -4979092072635437477
+    second: Enemy-Melee-Idle-S_81
+  - first:
+      213: -4280271359065807177
+    second: Enemy-Melee-Idle-S_82
+  - first:
+      213: -2209537989502799539
+    second: Enemy-Melee-Idle-S_83
+  - first:
+      213: 2125491141098624308
+    second: Enemy-Melee-Idle-S_84
+  - first:
+      213: 6688305024061178273
+    second: Enemy-Melee-Idle-S_85
+  - first:
+      213: 4831339438316949539
+    second: Enemy-Melee-Idle-S_86
+  - first:
+      213: -6118446606590828802
+    second: Enemy-Melee-Idle-S_87
+  - first:
+      213: -7251544272014090754
+    second: Enemy-Melee-Idle-S_88
+  - first:
+      213: -5368902379808551077
+    second: Enemy-Melee-Idle-S_89
+  - first:
+      213: -4099700938673672720
+    second: Enemy-Melee-Idle-S_90
+  - first:
+      213: -247032687511268999
+    second: Enemy-Melee-Idle-S_91
+  - first:
+      213: 3317605106211819252
+    second: Enemy-Melee-Idle-S_92
+  - first:
+      213: -4247269009788249902
+    second: Enemy-Melee-Idle-S_93
+  - first:
+      213: -22831844416683593
+    second: Enemy-Melee-Idle-S_94
+  - first:
+      213: -9169820028216964489
+    second: Enemy-Melee-Idle-S_95
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b795b043e7e9e360800000000000000
+      internalID: 7199540442557683637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cae2cf07238c0990800000000000000
+      internalID: -7418410282394654007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b151582bf753080800000000000000
+      internalID: -9208313458375451893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeca0a9ed480a3b80800000000000000
+      internalID: -8414403823063225106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd84f2ecf1659b840800000000000000
+      internalID: 5240314336025463003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c19e9de434a81b90800000000000000
+      internalID: -7270881051157818938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c72270d6ab3c9170800000000000000
+      internalID: 8186483810300471235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccd23d6a570d03d0800000000000000
+      internalID: -3238924472049017653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e83b718565253c9e0800000000000000
+      internalID: -1602346511615151218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c85896e9534492f10800000000000000
+      internalID: 2245400886302573964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372f38a51b186bf80800000000000000
+      internalID: -8091137081796726157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy-Melee-Idle-S_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e30ceb3373474ffc0800000000000000
+      internalID: -3462014433100906434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

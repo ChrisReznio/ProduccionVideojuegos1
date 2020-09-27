@@ -16,9 +16,10 @@ public class PlayerHealthManager : MonoBehaviour
     void Update()
     {
         if(currentHealth <= 0){
-            gameObject.SetActive(false);
-
-            //gameManager.Respown
+            if (!gameObject.GetComponent<PlayerController>().isInputEnabled)
+                gameObject.GetComponent<RespawnController>().Respawn();
+            else
+                gameObject.GetComponent<SwitchToSoul>().SwitchToSoulAfterDeath();
         }
     }
 
