@@ -19,7 +19,7 @@ public class HurtPlayer : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.name == "Player"){
+        if(other.gameObject.name == "Player" || other.gameObject.name == "LineRenderer"){
             GameObject theController = GameObject.FindGameObjectWithTag("Player");
             if (theController.GetComponent<PlayerController>().canBeDamaged)
             { 
