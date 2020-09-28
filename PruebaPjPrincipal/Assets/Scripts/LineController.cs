@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class LineController : MonoBehaviour
@@ -12,9 +13,16 @@ public class LineController : MonoBehaviour
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;
 
+    EdgeCollider2D col;
+
+
     void Start()
     {
         line = gameObject.AddComponent<LineRenderer>();
+
+        col = gameObject.AddComponent<EdgeCollider2D>();
+        col.isTrigger = true;
+        col.edgeRadius = 1;
 
         player = GameObject.FindGameObjectWithTag("Player");
         soul = GameObject.FindGameObjectWithTag("Soul");
@@ -34,7 +42,7 @@ public class LineController : MonoBehaviour
         colorKey = new GradientColorKey[2];
         colorKey[0].color = Color.red;
         colorKey[0].time = 0.0f;
-        colorKey[1].color = Color.blue;
+        colorKey[1].color = Color.magenta;
         colorKey[1].time = 1.0f;
 
         // Populate the alpha  keys at relative time 0 and 1  (0 and 100%)
@@ -54,6 +62,7 @@ public class LineController : MonoBehaviour
     {
         line.startWidth = 0.0f;
         line.endWidth = 0.0f;
+
         if (player.GetComponent<PlayerController>().canBeDamaged && soul.GetComponent<SoulController>().IsInputEnabled)
         {
             line.startWidth = 0.1f;
@@ -61,6 +70,16 @@ public class LineController : MonoBehaviour
             
             line.SetPosition(0, player.transform.localPosition);
             line.SetPosition(1, soul.transform.localPosition);
+
+            Vector2[] points = new Vector2[2]
+            {
+                player.transform.localPosition,
+                soul.transform.localPosition
+            };
+
+            //update the edge colliders points
+            col.points = points;
         }
+
     }
 }

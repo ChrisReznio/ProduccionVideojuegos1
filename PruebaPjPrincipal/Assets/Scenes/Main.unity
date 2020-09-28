@@ -2094,6 +2094,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.618884
@@ -2144,7 +2148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
@@ -3300,6 +3304,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.673592
@@ -3350,7 +3358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
@@ -4065,6 +4073,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5457535
@@ -4115,7 +4127,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
@@ -7415,6 +7427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1345229
@@ -7465,7 +7481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
@@ -10213,6 +10229,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.6482382
@@ -10263,7 +10283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: moveSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
