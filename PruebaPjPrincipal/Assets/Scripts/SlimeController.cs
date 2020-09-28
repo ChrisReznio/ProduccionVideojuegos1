@@ -6,65 +6,67 @@ public class SlimeController : MonoBehaviour
 {
     public float moveSpeed;
     public float timeBetweenMove;
-    public float timeToMove;
+    public float visionRange;
 
     private float timeBetweenMoveCounter;
-    private float timeToMoveCounter;
-
-    private Vector3 moveDirection;
     private Rigidbody2D myRigidBody;
-    private bool moving;
-
-    public float waitToReload;
-    private bool reloading;
     private GameObject player;
+    private Transform target;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
-        timeToMoveCounter =  Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
-
+        player = GameObject.FindGameObjectWithTag("Player");
+        timeBetweenMoveCounter = 0;
         myRigidBody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (moving)
+        if (!player.GetComponent<PlayerController>().canBeDamaged)
         {
-            timeToMoveCounter -= Time.deltaTime;
-            myRigidBody.velocity = moveDirection;
-            if (timeToMoveCounter < 0f)
-            {
-                moving = false;
-                timeBetweenMoveCounter = Random.Range(timeBetweenMove * 0.75f, timeBetweenMove * 1.25f);
-            }
+            myRigidBody.velocity = Vector3.zero;
         }
         else
         {
-            timeBetweenMoveCounter -= Time.deltaTime;
-            myRigidBody.velocity = Vector2.zero;
-            if (timeBetweenMoveCounter < 0f)
+            target = player.GetComponent<Transform>();
+            if (PlayerInSight())
             {
-                moving = true;
-                timeToMoveCounter =  Random.Range(timeToMove * 0.75f, timeToMove * 1.25f);
-                moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed,
-                                            Random.Range(-1f, 1f) * moveSpeed,
-                                            0f);
-            }
-        }
-
-        if(reloading)
-        {
-            waitToReload -= Time.deltaTime;
-            if(waitToReload < 0)
-            {
-                Application.LoadLevel(Application.loadedLevel);
-                player.SetActive(true);
+                Debug.Log("si");
+                if (TouchingPlayer())
+                {
+                    ResetMovement();
+                }
+                else
+                {
+                    if (timeBetweenMoveCounter <= 0f)
+                    {
+                        Vector3 direction = (target.position - transform.position).normalized;
+                        myRigidBody.velocity = moveSpeed * direction;
+                    }
+                    else
+                    {
+                        timeBetweenMoveCounter -= Time.deltaTime;
+                    }
+                }
             }
         }
     }
 
-    
+    bool PlayerInSight()
+    {
+        return (Vector3.Distance(transform.position, target.position) < visionRange);
+    }
+
+    bool TouchingPlayer()
+    {
+        return (Vector3.Distance(transform.position, target.position) < 0.8);
+    }
+
+    void ResetMovement()
+    {
+        timeBetweenMoveCounter = timeBetweenMove;
+        myRigidBody.velocity = Vector3.zero;
+    }
 }

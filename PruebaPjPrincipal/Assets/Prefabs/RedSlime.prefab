@@ -156,10 +156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec25b787cbd2f547af399723d82db98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  timeBetweenMove: 0.2
-  timeToMove: 0.2
-  waitToReload: 2
+  moveSpeed: 1
+  timeBetweenMove: 2
+  visionRange: 10
 --- !u!114 &528250081639302542
 MonoBehaviour:
   m_ObjectHideFlags: 0
