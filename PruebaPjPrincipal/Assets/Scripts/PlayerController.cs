@@ -17,10 +17,15 @@ public class PlayerController : MonoBehaviour
     public float attackTime;
     private float attackTimeCounter;
 
+    public GameObject throwableSpear;
+    public float skillThrowSpearCooldown;
+    private float throwSpearInterCooldown;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         myRigidbody= GetComponent<Rigidbody2D>();
+        throwSpearInterCooldown = 0;
     }
 
     void Update()
@@ -47,7 +52,15 @@ public class PlayerController : MonoBehaviour
                     attacking =  true;
                     myRigidbody.velocity = Vector2.zero;
                     anim.SetBool("PlayerAttacking", true);
+
+                }else if(Input.GetKeyDown(KeyCode.K) && throwSpearInterCooldown <= 0){
+                    throwSpearInterCooldown = skillThrowSpearCooldown;
+                    Vector2 velocity = new Vector2(anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY"));
+                    Spear spear = Instantiate(throwableSpear, transform.position, Quaternion.identity).GetComponent<Spear>();
+                    float zRotation = Mathf.Atan2(-anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY")) * Mathf.Rad2Deg;
+                    spear.Setup(velocity, new Vector3(0,0, zRotation + 225));
                 }
+                
             }
 
             if(attackTimeCounter > 0){
@@ -56,7 +69,11 @@ public class PlayerController : MonoBehaviour
         
             if(attackTimeCounter <= 0){
                 attacking =  false;
-                 anim.SetBool("PlayerAttacking", false);
+                anim.SetBool("PlayerAttacking", false);
+            }
+
+            if(throwSpearInterCooldown > 0){
+                throwSpearInterCooldown -= Time.deltaTime;
             }
        
             anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
