@@ -10315,14 +10315,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6458017557529066360, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
-      propertyPath: attackTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458017557529066360, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6458017557529066361, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.81
@@ -10374,14 +10366,6 @@ PrefabInstance:
     - target: {fileID: 6458017557529066363, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
       propertyPath: m_TagString
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458017557529066365, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
-      propertyPath: m_Mass
-      value: 1000000
-      objectReference: {fileID: 0}
-    - target: {fileID: 6458017557529066365, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa61015868656ea478dce3f2361a5fcc, type: 3}
