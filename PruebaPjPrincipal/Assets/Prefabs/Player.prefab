@@ -204,6 +204,9 @@ MonoBehaviour:
   attackTime: 0.5
   throwableSpear: {fileID: 1625936209003485001, guid: a48cee054587ed94f9784a5d9439e779, type: 3}
   skillThrowSpearCooldown: 6
+  dashSpeed: 20
+  dashRange: 2
+  skillDashCooldown: 4
 --- !u!212 &6458017557529066362
 SpriteRenderer:
   m_ObjectHideFlags: 0
