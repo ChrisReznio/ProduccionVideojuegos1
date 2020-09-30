@@ -20,20 +20,36 @@ public class PlayerController : MonoBehaviour
     public GameObject throwableSpear;
     public float skillThrowSpearCooldown;
     private float throwSpearInterCooldown;
+    private float spearRotationOffset;
+
+    public float dashSpeed;
+    private bool dashing;
+    public float dashRange;
+    private float actualDashRange;
+    public float skillDashCooldown;
+    private float dashInternCooldown;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         myRigidbody= GetComponent<Rigidbody2D>();
+
         throwSpearInterCooldown = 0;
+        spearRotationOffset = 225;
+
+        dashing = false;
+        dashInternCooldown = 0;
     }
 
     void Update()
     {
-        myRigidbody.velocity = Vector2.zero;
         playerMoving = false;
 
-        if (isInputEnabled)
+        if(!dashing){
+            myRigidbody.velocity = Vector2.zero;
+        }
+
+        if (isInputEnabled && !dashing)
         {
             playerMoving =  true;
 
@@ -58,7 +74,14 @@ public class PlayerController : MonoBehaviour
                     Vector2 velocity = new Vector2(anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY"));
                     Spear spear = Instantiate(throwableSpear, transform.position, Quaternion.identity).GetComponent<Spear>();
                     float zRotation = Mathf.Atan2(-anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY")) * Mathf.Rad2Deg;
-                    spear.Setup(velocity, new Vector3(0,0, zRotation + 225));
+                    spear.Setup(velocity, new Vector3(0,0, zRotation + spearRotationOffset));
+
+                }else if(Input.GetKeyDown(KeyCode.L) && dashInternCooldown <= 0){
+                    actualDashRange = 0;
+                    Vector2 velocity =  ((new Vector2(-anim.GetFloat("LastMoveX"), -anim.GetFloat("LastMoveY"))).normalized) * dashSpeed;
+                    myRigidbody.velocity = velocity;
+                    dashing= true;
+                    dashInternCooldown = skillDashCooldown;
                 }
                 
             }
@@ -75,12 +98,27 @@ public class PlayerController : MonoBehaviour
             if(throwSpearInterCooldown > 0){
                 throwSpearInterCooldown -= Time.deltaTime;
             }
+
+            
        
             anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
             anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
             
             anim.SetFloat("LastMoveX", lastMove.x);
             anim.SetFloat("LastMoveY", lastMove.y);
+        }
+        
+        if(dashInternCooldown > 0){
+            dashInternCooldown -= Time.deltaTime;
+        }
+
+        if(actualDashRange < dashRange && dashing){
+                actualDashRange += dashSpeed * Time.deltaTime;
+            }
+
+        if(actualDashRange >= dashRange && dashing){
+            dashing = false;
+            myRigidbody.velocity = Vector2.zero;
         }
 
         anim.SetBool("PlayerMoving", playerMoving);
