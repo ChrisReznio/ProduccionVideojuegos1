@@ -12,6 +12,8 @@ public class SlimeController : MonoBehaviour
     private Rigidbody2D myRigidBody;
     private GameObject player;
     private Transform target;
+    private bool inContactWithPlayer;
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,8 @@ public class SlimeController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         timeBetweenMoveCounter = 0;
         myRigidBody = GetComponent<Rigidbody2D>();
+        inContactWithPlayer = false;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -33,16 +37,18 @@ public class SlimeController : MonoBehaviour
             target = player.GetComponent<Transform>();
             if (PlayerInSight())
             {
-                Debug.Log("si");
-                if (TouchingPlayer())
+                if (inContactWithPlayer)
                 {
                     ResetMovement();
+                    inContactWithPlayer = false;
                 }
                 else
                 {
                     if (timeBetweenMoveCounter <= 0f)
                     {
                         Vector3 direction = (target.position - transform.position).normalized;
+                        animator.SetFloat("MoveX", direction.x);
+                        animator.SetFloat("MoveY", direction.y);
                         myRigidBody.velocity = moveSpeed * direction;
                     }
                     else
@@ -51,8 +57,20 @@ public class SlimeController : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                ResetMovement();
+            }
         }
     }
+
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.name == "Player")
+    //    {
+    //        inContactWithPlayer = true;
+    //    }
+    //}
 
     bool PlayerInSight()
     {
@@ -61,7 +79,7 @@ public class SlimeController : MonoBehaviour
 
     bool TouchingPlayer()
     {
-        return (Vector3.Distance(transform.position, target.position) < 0.8);
+        return (Vector3.Distance(transform.position, target.position) < 1);
     }
 
     void ResetMovement()
