@@ -27,8 +27,11 @@ public class SwitchToSoul : MonoBehaviour
             }
             else 
             {
-                SwitchSoulOnCommand();
-                soul.transform.position = player.transform.position + new Vector3(0, 0, 0);
+                if (!soul.GetComponent<SoulController>().canDealDamage)
+                {
+                    SwitchSoulOnCommand();
+                    soul.transform.position = player.transform.position + new Vector3(0, 0, 0);
+                }
             }
             
         }
