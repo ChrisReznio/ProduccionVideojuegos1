@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class BodyController : MonoBehaviour
 {
     
     public float moveSpeed;
     private Animator anim;
-    private bool playerMoving;
+    private bool bodyMoving;
     private Vector2 lastMove;
     private Rigidbody2D myRigidbody;
     public bool isInputEnabled = false;
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        playerMoving = false;
+        bodyMoving = false;
 
         if(!dashing){
             myRigidbody.velocity = Vector2.zero;
@@ -51,26 +51,18 @@ public class PlayerController : MonoBehaviour
 
         if (isInputEnabled && !dashing)
         {
-            playerMoving =  true;
+            bodyMoving =  true;
 
             if(!attacking)
             {
                 if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
                 {
-                    playerMoving = false;
+                    bodyMoving = false;
                 }
                 else
                 {
-                    if (Input.GetAxisRaw("Horizontal") != 0)
-                    {
-                        myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, 0);
-                        lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
-                    }
-                    else
-                    {
-                        myRigidbody.velocity = new Vector2(0, Input.GetAxisRaw("Vertical") * moveSpeed);
-                        lastMove = new Vector2(0, Input.GetAxisRaw("Vertical"));
-                    }
+                    myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, Input.GetAxisRaw("Vertical") * moveSpeed);
+                    lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
                 }
                 if(Input.GetKeyDown(KeyCode.J))
                 {
@@ -134,6 +126,6 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = Vector2.zero;
         }
 
-        anim.SetBool("PlayerMoving", playerMoving);
+        anim.SetBool("PlayerMoving", bodyMoving);
     }
 }

@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchToPlayer : MonoBehaviour
+public class SwitchToBody : MonoBehaviour
 {
     private GameObject soul;
-    private GameObject player;
+    private GameObject body;
     private GameObject cam;
     private GameObject hitbox;
-    // Start is called before the first frame update
+
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        body = GameObject.FindGameObjectWithTag("Body");
         soul = GameObject.FindGameObjectWithTag("Soul");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         hitbox = GameObject.FindGameObjectWithTag("SoulBox");
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         
@@ -25,12 +24,12 @@ public class SwitchToPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && !soul.GetComponent<SoulController>().canDealDamage)
+        if (other.gameObject.tag == "Body" && !soul.GetComponent<SoulController>().canDealDamage)
         {
-            player.GetComponent<PlayerController>().isInputEnabled = true;
-            player.GetComponent<PlayerController>().canBeDamaged = true;
+            body.GetComponent<BodyController>().isInputEnabled = true;
+            body.GetComponent<BodyController>().canBeDamaged = true;
 
-            cam.GetComponent<CameraController>().followTarget = GameObject.Find("Player");
+            cam.GetComponent<CameraController>().followTarget = GameObject.FindGameObjectWithTag("Body");
 
             soul.GetComponent<SoulController>().IsInputEnabled = false;
 
