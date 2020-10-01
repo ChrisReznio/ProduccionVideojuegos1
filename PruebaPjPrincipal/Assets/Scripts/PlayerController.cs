@@ -55,12 +55,22 @@ public class PlayerController : MonoBehaviour
 
             if(!attacking)
             {
-                myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, 
-                                                    Input.GetAxisRaw("Vertical") * moveSpeed);
-                if(Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0){
-                    playerMoving =  false;
-                }else{
-                    lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+                if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+                {
+                    playerMoving = false;
+                }
+                else
+                {
+                    if (Input.GetAxisRaw("Horizontal") != 0)
+                    {
+                        myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, 0);
+                        lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
+                    }
+                    else
+                    {
+                        myRigidbody.velocity = new Vector2(0, Input.GetAxisRaw("Vertical") * moveSpeed);
+                        lastMove = new Vector2(0, Input.GetAxisRaw("Vertical"));
+                    }
                 }
                 if(Input.GetKeyDown(KeyCode.J))
                 {
@@ -76,17 +86,22 @@ public class PlayerController : MonoBehaviour
                     float zRotation = Mathf.Atan2(-anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY")) * Mathf.Rad2Deg;
                     spear.Setup(velocity, new Vector3(0,0, zRotation + spearRotationOffset));
 
-                }else if(Input.GetKeyDown(KeyCode.L) && dashInternCooldown <= 0){
-                    actualDashRange = 0;
-                    Vector2 velocity =  ((new Vector2(-anim.GetFloat("LastMoveX"), -anim.GetFloat("LastMoveY"))).normalized) * dashSpeed;
-                    myRigidbody.velocity = velocity;
-                    dashing= true;
-                    dashInternCooldown = skillDashCooldown;
                 }
                 
             }
 
-            if(attackTimeCounter > 0){
+            if (Input.GetKeyDown(KeyCode.L) && dashInternCooldown <= 0)
+            {
+                actualDashRange = 0;
+                Vector2 velocity = ((new Vector2(-anim.GetFloat("LastMoveX"), -anim.GetFloat("LastMoveY"))).normalized) * dashSpeed;
+                myRigidbody.velocity = velocity;
+                dashing = true;
+                dashInternCooldown = skillDashCooldown;
+                attacking = false;
+                anim.SetBool("PlayerAttacking", false);
+            }
+
+            if (attackTimeCounter > 0){
                 attackTimeCounter -= Time.deltaTime;
             }
         
@@ -98,11 +113,9 @@ public class PlayerController : MonoBehaviour
             if(throwSpearInterCooldown > 0){
                 throwSpearInterCooldown -= Time.deltaTime;
             }
-
-            
        
-            anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-            anim.SetFloat("MoveY", Input.GetAxisRaw("Vertical"));
+            anim.SetFloat("MoveX", lastMove.x);
+            anim.SetFloat("MoveY", lastMove.y);
             
             anim.SetFloat("LastMoveX", lastMove.x);
             anim.SetFloat("LastMoveY", lastMove.y);
