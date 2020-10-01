@@ -8,6 +8,7 @@ TagManager:
   - Soul
   - SoulBox
   - Body
+  - Wall
   layers:
   - Default
   - TransparentFX
