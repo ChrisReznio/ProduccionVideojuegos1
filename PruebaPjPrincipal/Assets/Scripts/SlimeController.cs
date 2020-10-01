@@ -10,7 +10,7 @@ public class SlimeController : MonoBehaviour
 
     private float timeBetweenMoveCounter;
     private Rigidbody2D myRigidBody;
-    private GameObject player;
+    private GameObject body;
     private Transform target;
     private bool inContactWithPlayer;
     private Animator animator;
@@ -18,48 +18,32 @@ public class SlimeController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        body = GameObject.FindGameObjectWithTag("Player");
         timeBetweenMoveCounter = 0;
         myRigidBody = GetComponent<Rigidbody2D>();
-        inContactWithPlayer = false;
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!player.GetComponent<PlayerController>().canBeDamaged)
+        myRigidBody.velocity = Vector2.zero;
+        if (body.GetComponent<PlayerController>().canBeDamaged)
         {
-            myRigidBody.velocity = Vector3.zero;
-        }
-        else
-        {
-            target = player.GetComponent<Transform>();
+            target = body.GetComponent<Transform>();
             if (PlayerInSight())
             {
-                if (inContactWithPlayer)
+                if (timeBetweenMoveCounter <= 0f)
                 {
-                    ResetMovement();
-                    inContactWithPlayer = false;
+                    Vector2 direction = GetDirection();
+                    animator.SetFloat("MoveX", direction.x);
+                    animator.SetFloat("MoveY", direction.y);
+                    myRigidBody.MovePosition(myRigidBody.position + moveSpeed * direction * Time.fixedDeltaTime);
                 }
                 else
                 {
-                    if (timeBetweenMoveCounter <= 0f)
-                    {
-                        Vector3 direction = (target.position - transform.position).normalized;
-                        animator.SetFloat("MoveX", direction.x);
-                        animator.SetFloat("MoveY", direction.y);
-                        myRigidBody.velocity = moveSpeed * direction;
-                    }
-                    else
-                    {
-                        timeBetweenMoveCounter -= Time.deltaTime;
-                    }
+                    timeBetweenMoveCounter -= Time.deltaTime;
                 }
-            }
-            else
-            {
-                ResetMovement();
             }
         }
     }
@@ -68,23 +52,27 @@ public class SlimeController : MonoBehaviour
     {
         if (collision.gameObject.name == "Player")
         {
-            inContactWithPlayer = true;
+            timeBetweenMoveCounter = timeBetweenMove;
         }
     }
 
-    bool PlayerInSight()
+    private bool PlayerInSight()
     {
         return (Vector3.Distance(transform.position, target.position) < visionRange);
     }
 
-    bool TouchingPlayer()
+    private Vector2 GetDirection()
     {
-        return (Vector3.Distance(transform.position, target.position) < 1);
-    }
 
-    void ResetMovement()
-    {
-        timeBetweenMoveCounter = timeBetweenMove;
-        myRigidBody.velocity = Vector3.zero;
+        Vector2 direction;
+        if (Mathf.Abs(target.position.x - transform.position.x) >= Mathf.Abs(target.position.y - transform.position.y))
+        {
+            direction = new Vector2(target.position.x - transform.position.x, 0).normalized;
+        }
+        else
+        {
+            direction = new Vector2(0, target.position.y - transform.position.y).normalized;
+        }
+        return direction;
     }
 }
