@@ -9,6 +9,10 @@ public class RespawnController : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Body");
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        player.GetComponent<BodyController>().canBeDamaged = false;
+        player.GetComponent<BodyController>().isInputEnabled = false;
+        GameObject soul = GameObject.FindGameObjectWithTag("Soul");
+        soul.GetComponent<SoulController>().canDealDamage = false;
 
         BodyHealthManager bhm = player.GetComponent<BodyHealthManager>();
         bhm.currentHealth = bhm.maxHealth;

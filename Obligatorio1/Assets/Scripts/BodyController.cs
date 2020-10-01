@@ -10,8 +10,8 @@ public class BodyController : MonoBehaviour
     private bool bodyMoving;
     private Vector2 lastMove;
     private Rigidbody2D myRigidbody;
-    public bool isInputEnabled = false;
-    public bool canBeDamaged = false;
+    public bool isInputEnabled;
+    public bool canBeDamaged;
 
     private bool attacking;
     public float attackTime;
@@ -39,6 +39,8 @@ public class BodyController : MonoBehaviour
 
         dashing = false;
         dashInternCooldown = 0;
+        canBeDamaged = false;
+        isInputEnabled = false;
     }
 
     void Update()
