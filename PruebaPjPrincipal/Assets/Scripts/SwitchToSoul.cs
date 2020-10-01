@@ -5,23 +5,23 @@ using UnityEngine;
 public class SwitchToSoul : MonoBehaviour
 {
     private GameObject soul;
-    private GameObject player;
+    private GameObject body;
     private GameObject cam;
-    // Start is called before the first frame update
+
     void Start()
     {
-       player = GameObject.FindGameObjectWithTag("Player");
+       body = GameObject.FindGameObjectWithTag("Body");
        soul   = GameObject.FindGameObjectWithTag("Soul");
        cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X)&&player.GetComponent<PlayerController>().canBeDamaged) 
+        if (Input.GetKeyDown(KeyCode.X)&&body.GetComponent<BodyController>().canBeDamaged) 
         {
 
-            if (player.GetComponent<PlayerController>().isInputEnabled)
+            if (body.GetComponent<BodyController>().isInputEnabled)
             {
                 SwitchSoulOnCommand();
             }
@@ -30,7 +30,7 @@ public class SwitchToSoul : MonoBehaviour
                 if (!soul.GetComponent<SoulController>().canDealDamage)
                 {
                     SwitchSoulOnCommand();
-                    soul.transform.position = player.transform.position + new Vector3(0, 0, 0);
+                    soul.transform.position = body.transform.position + new Vector3(0, 0, 0);
                 }
             }
             
@@ -45,13 +45,13 @@ public class SwitchToSoul : MonoBehaviour
 
     public void SwitchSoulOnCommand() 
     {
-        player.GetComponent<PlayerController>().isInputEnabled = false;
+        body.GetComponent<BodyController>().isInputEnabled = false;
 
         soul.transform.localScale = new Vector3(1, 1, 0);
         soul.GetComponent<SoulController>().IsInputEnabled = true;
         soul.GetComponent<SoulController>().canDealDamage = false;
         
-        soul.transform.position = player.transform.position+new Vector3(2,2,0);
+        soul.transform.position = body.transform.position+new Vector3(2,2,0);
 
         cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
@@ -60,21 +60,21 @@ public class SwitchToSoul : MonoBehaviour
     
     public void SwitchToSoulAfterDeath() 
     {
-        player.GetComponent<PlayerController>().isInputEnabled = false;
-        player.GetComponent<PlayerController>().canBeDamaged = false;
+        body.GetComponent<BodyController>().isInputEnabled = false;
+        body.GetComponent<BodyController>().canBeDamaged = false;
 
         soul.transform.localScale = new Vector3(1, 1, 0);
         soul.GetComponent<SoulController>().IsInputEnabled = true;
         soul.GetComponent<SoulController>().canDealDamage = false;
 
-        soul.transform.position = player.transform.position + new Vector3(2, 2, 0);
+        soul.transform.position = body.transform.position + new Vector3(2, 2, 0);
 
         cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
-        RespawnPlayer();
+        RespawnBody();
     }
 
-    void RespawnPlayer() {
-        player.GetComponent<RespawnController>().Respawn();
+    void RespawnBody() {
+        body.GetComponent<RespawnController>().Respawn();
     }
 }

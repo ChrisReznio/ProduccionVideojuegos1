@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerDetachController : MonoBehaviour
+public class BodyDetachController : MonoBehaviour
 {
     public float currentCounter;
     public float detachThreshold;
@@ -11,7 +11,8 @@ public class PlayerDetachController : MonoBehaviour
 
     private GameObject player;
     private GameObject soul;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         currentCounter = 0;
@@ -19,14 +20,13 @@ public class PlayerDetachController : MonoBehaviour
         detachedRunCounter = 0;
         detachedReturnThreshold = 600;
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("Body");
         soul = GameObject.FindGameObjectWithTag("Soul");
     }
-
-    // Update is called once per frame
+    
     void FixedUpdate()
     {
-        if (player.GetComponent<PlayerController>().isInputEnabled) 
+        if (player.GetComponent<BodyController>().isInputEnabled) 
         {
             currentCounter++;
         }
@@ -35,7 +35,7 @@ public class PlayerDetachController : MonoBehaviour
             currentCounter = 0;
             player.GetComponent<SwitchToSoul>().SwitchSoulPeriodic();
         }
-        if (player.GetComponent<PlayerController>().canBeDamaged) 
+        if (player.GetComponent<BodyController>().canBeDamaged) 
         {
             if (soul.GetComponent<SoulController>().canDealDamage)
             {

@@ -146,8 +146,8 @@ GameObject:
   - component: {fileID: 6458017557529066366}
   - component: {fileID: 9019002370334911617}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: Body
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce61e70d40bd8ad48a8772b375782e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
   isInputEnabled: 0
   canBeDamaged: 0
   attackTime: 0.5
@@ -317,5 +317,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad6da44aff87fdc4c8e14623bd2c82c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 100
   currentHealth: 0

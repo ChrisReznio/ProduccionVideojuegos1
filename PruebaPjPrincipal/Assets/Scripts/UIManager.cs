@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public Slider healthBar;
     public Text HPText;
-    public PlayerHealthManager playerHealth;
+    public BodyHealthManager bodyHealth;
 
     public Slider detachTimer;
     public Text detachText;
@@ -15,31 +15,31 @@ public class UIManager : MonoBehaviour
     public Slider reattachTimer;
     public Text reattachText;
 
-    public PlayerDetachController pdc;
-    // Start is called before the first frame update
+    public BodyDetachController bdc;
+
     void Start()
     {
-        pdc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDetachController>();
+        bdc = GameObject.FindGameObjectWithTag("Body").GetComponent<BodyDetachController>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().canBeDamaged)
+        if (GameObject.FindGameObjectWithTag("Body").GetComponent<BodyController>().canBeDamaged)
         {
             EnableWidgets();
 
-            healthBar.maxValue = playerHealth.maxHealth;
-            healthBar.value = playerHealth.currentHealth;
-            HPText.text = "HP: " + playerHealth.currentHealth + "/" + playerHealth.maxHealth;
+            healthBar.maxValue = bodyHealth.maxHealth;
+            healthBar.value = bodyHealth.currentHealth;
+            HPText.text = "HP: " + bodyHealth.currentHealth + "/" + bodyHealth.maxHealth;
 
-            detachTimer.maxValue = pdc.detachThreshold / 60;
-            detachTimer.value = pdc.currentCounter / 60;
-            detachText.text = "Time to dettach left " + (int)((pdc.detachThreshold - pdc.currentCounter) / 60);
+            detachTimer.maxValue = bdc.detachThreshold / 60;
+            detachTimer.value = bdc.currentCounter / 60;
+            detachText.text = "Time to dettach left " + (int)((bdc.detachThreshold - bdc.currentCounter) / 60);
 
-            reattachTimer.maxValue = pdc.detachedReturnThreshold / 60;
-            reattachTimer.value = pdc.detachedRunCounter / 60;
-            reattachText.text = "Time to reattach left " + (int)((pdc.detachedReturnThreshold - pdc.detachedRunCounter) / 60);
+            reattachTimer.maxValue = bdc.detachedReturnThreshold / 60;
+            reattachTimer.value = bdc.detachedRunCounter / 60;
+            reattachText.text = "Time to reattach left " + (int)((bdc.detachedReturnThreshold - bdc.detachedRunCounter) / 60);
         }
         else 
         {

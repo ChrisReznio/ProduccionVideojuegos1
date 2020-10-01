@@ -5,29 +5,26 @@ using UnityEngine;
 
 public class LineController : MonoBehaviour
 {
-    // Start is called before the first frame update
     private GameObject soul;
-    private GameObject player;
+    private GameObject body;
     private LineRenderer line;
     Gradient gradient;
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;
 
 
-
-
     void Start()
     {
         line = gameObject.AddComponent<LineRenderer>();
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        body = GameObject.FindGameObjectWithTag("Body");
         soul = GameObject.FindGameObjectWithTag("Soul");
 
         line.startWidth = 0.0f;
         line.endWidth = 0.0f;
         line.material = new Material(Shader.Find("Sprites/Default"));
 
-        line.sortingLayerName = "Player";
+        line.sortingLayerName = "Body";
         line.sortingOrder = 1;
 
         line.startColor = line.endColor = new Color(1, 0, 0, 1);
@@ -52,19 +49,19 @@ public class LineController : MonoBehaviour
 
         line.colorGradient = gradient;
     }
+    
 
-    // Update is called once per frame
     void Update()
     {
         line.startWidth = 0.0f;
         line.endWidth = 0.0f;
 
-        if (player.GetComponent<PlayerController>().canBeDamaged && soul.GetComponent<SoulController>().IsInputEnabled)
+        if (body.GetComponent<BodyController>().canBeDamaged && soul.GetComponent<SoulController>().IsInputEnabled)
         {
             line.startWidth = 0.1f;
             line.endWidth = 0.2f;
             
-            line.SetPosition(0, player.transform.localPosition);
+            line.SetPosition(0, body.transform.localPosition);
             line.SetPosition(1, soul.transform.localPosition);
         }
 

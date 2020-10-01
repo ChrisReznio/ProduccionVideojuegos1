@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 528250081639302542}
   - component: {fileID: 370128819042846035}
   m_Layer: 0
-  m_Name: RedSlime
+  m_Name: Shark
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185,5 +185,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd9bd390efde9b42af73efa144a5025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 10
   currentHealth: 0
