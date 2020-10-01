@@ -16,7 +16,7 @@ public class BodyDetachController : MonoBehaviour
     void Start()
     {
         currentCounter = 0;
-        detachThreshold = 1800;
+        detachThreshold = 1200;
         detachedRunCounter = 0;
         detachedReturnThreshold = 600;
 

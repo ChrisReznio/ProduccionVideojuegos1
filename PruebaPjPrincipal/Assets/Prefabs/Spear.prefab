@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb1606b9825ad774f85bbdee9ae2d123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToGive: 10
+  damageToGive: 20
   damageBurstParticles: {fileID: 4902356709463882432, guid: fe840b8115a537842ad22111863578cb, type: 3}
   hitPoint: {fileID: 1625936209731917514}
   damageNumber: {fileID: 5577766205986723311, guid: c17d820eee8efd8419341c55e56dcda6, type: 3}
