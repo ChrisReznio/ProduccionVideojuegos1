@@ -67,7 +67,7 @@ public class HeartsUI : MonoBehaviour
         transform.DetachChildren();
         var attachedBodyHealth = 0;
 
-        if (GameObject.FindGameObjectWithTag("Body").GetComponent<BodyController>().canBeDamaged)
+        if (GameObject.FindGameObjectWithTag("Body").GetComponent<BodyController>().isInputEnabled)
         {
             AddFaceToUI(bodyFaceSprite);
             attachedBodyHealth = bodyHealthManager.currentHealth;
@@ -75,6 +75,10 @@ public class HeartsUI : MonoBehaviour
         else
         {
             AddFaceToUI(maiaFaceSprite);
+            if (GameObject.FindGameObjectWithTag("Body").GetComponent<BodyController>().canBeDamaged)
+            {
+                attachedBodyHealth = bodyHealthManager.currentHealth;
+            }
         }
 
         var completeHeartCount = attachedBodyHealth / 10;
