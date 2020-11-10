@@ -19,7 +19,7 @@ public class BodyController : MonoBehaviour
 
     public GameObject throwableSpear;
     public float skillThrowSpearCooldown;
-    private float throwSpearInterCooldown;
+    public float throwSpearInterCooldown;
     private float spearRotationOffset;
 
     public float dashSpeed;
@@ -27,7 +27,7 @@ public class BodyController : MonoBehaviour
     public float dashRange;
     private float actualDashRange;
     public float skillDashCooldown;
-    private float dashInternCooldown;
+    public float dashInternCooldown;
 
     void Start()
     {
@@ -101,10 +101,6 @@ public class BodyController : MonoBehaviour
                 attacking =  false;
                 anim.SetBool("PlayerAttacking", false);
             }
-
-            if(throwSpearInterCooldown > 0){
-                throwSpearInterCooldown -= Time.deltaTime;
-            }
        
             anim.SetFloat("MoveX", lastMove.x);
             anim.SetFloat("MoveY", lastMove.y);
@@ -112,8 +108,13 @@ public class BodyController : MonoBehaviour
             anim.SetFloat("LastMoveX", lastMove.x);
             anim.SetFloat("LastMoveY", lastMove.y);
         }
-        
-        if(dashInternCooldown > 0){
+
+        if (throwSpearInterCooldown > 0)
+        {
+            throwSpearInterCooldown -= Time.deltaTime;
+        }
+
+        if (dashInternCooldown > 0){
             dashInternCooldown -= Time.deltaTime;
         }
 

@@ -10,13 +10,6 @@ public class HeartsUI : MonoBehaviour
     public Sprite completeHeartSprite;
     public Sprite halfHeartSprite;
     public BodyHealthManager bodyHealthManager;
-    public BodyDetachController bdc;
-
-    void Start()
-    {
-        bdc = GameObject.FindGameObjectWithTag("Body").GetComponent<BodyDetachController>();
-    }
-
 
     void Update()
     {
