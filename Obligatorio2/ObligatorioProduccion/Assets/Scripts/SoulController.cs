@@ -17,7 +17,7 @@ public class SoulController : MonoBehaviour
 
     void Start()
     {
-        rb.isKinematic = true;
+        //rb.isKinematic = true;
         body = GameObject.FindGameObjectWithTag("Body");
         soul = GameObject.FindGameObjectWithTag("Soul");
         distanceA = 5;
