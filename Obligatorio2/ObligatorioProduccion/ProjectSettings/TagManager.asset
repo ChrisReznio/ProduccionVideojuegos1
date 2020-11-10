@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - Activable
   - Maia
+  - BodyBox
   layers:
   - Default
   - TransparentFX
@@ -20,14 +21,14 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Soul
+  - Body
+  - SoulInteractive
+  - BodyInteractive
+  - BodyBoxHole
+  - BodyBoxMark
+  - SoulBoxHole
+  - SoulBoxMark
   - 
   - 
   - 

@@ -30,7 +30,7 @@ public class SwitchToBody : MonoBehaviour
             body.GetComponent<BodyController>().isInputEnabled = true;
             body.GetComponent<BodyController>().canBeDamaged = true;
 
-            cam.GetComponent<CameraController>().followTarget = GameObject.FindGameObjectWithTag("Body");
+            cam.GetComponent<CameraController>().followTarget = body;
 
             soul.GetComponent<SoulController>().IsInputEnabled = false;
 
