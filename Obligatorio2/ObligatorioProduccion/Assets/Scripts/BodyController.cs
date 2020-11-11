@@ -43,6 +43,10 @@ public class BodyController : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.isPaused)
+        {
+            return;
+        }
         bodyMoving = false;
 
         if(!dashing){

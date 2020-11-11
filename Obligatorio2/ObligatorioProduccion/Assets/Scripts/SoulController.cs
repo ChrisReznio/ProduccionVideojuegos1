@@ -25,7 +25,7 @@ public class SoulController : MonoBehaviour
     void Update()
     {
         isMoving = false;
-        if (IsInputEnabled)
+        if (IsInputEnabled && !PauseMenu.isPaused)
         {
             isMoving = true;
 
