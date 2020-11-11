@@ -23,7 +23,7 @@ public class LineController : MonoBehaviour
         line.endWidth = 0.0f;
         line.material = new Material(Shader.Find("Sprites/Default"));
 
-        line.sortingLayerName = "Body";
+        line.sortingLayerName = "Player";
         line.sortingOrder = 1;
 
         line.startColor = line.endColor = new Color(1, 0, 0, 1);

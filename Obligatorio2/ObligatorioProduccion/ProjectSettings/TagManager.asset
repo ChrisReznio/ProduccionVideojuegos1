@@ -29,7 +29,7 @@ TagManager:
   - BodyBoxMark
   - SoulBoxHole
   - SoulBoxMark
-  - 
+  - Intangible
   - 
   - 
   - 
@@ -49,8 +49,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3239789653
+    locked: 0
   - name: Ground
     uniqueID: 1099583
+    locked: 0
+  - name: WorldObject
+    uniqueID: 3395495083
     locked: 0
   - name: Player
     uniqueID: 2914065367
@@ -58,12 +64,15 @@ TagManager:
   - name: Enemies
     uniqueID: 2183536335
     locked: 0
-  - name: WorldObject
-    uniqueID: 3395495083
-    locked: 0
   - name: PopUps
     uniqueID: 1102840813
     locked: 0
   - name: Proyectile
     uniqueID: 3512758433
+    locked: 0
+  - name: Walls
+    uniqueID: 3747015901
+    locked: 0
+  - name: Soul
+    uniqueID: 3817881361
     locked: 0
