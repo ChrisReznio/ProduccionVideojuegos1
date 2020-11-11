@@ -6,16 +6,18 @@ public class EnemyHealthManager : MonoBehaviour
 {
     public int maxHealth;
     public int currentHealth;
-    
+    private Animator animator;
+
     void Start()
     {
+        animator = transform.parent.GetComponent<Animator>();
         currentHealth = maxHealth;
     }
 
     void Update()
     {
         if(currentHealth <= 0){
-            Destroy(gameObject);
+            animator.SetBool("IsDead", true);
         }
     }
 

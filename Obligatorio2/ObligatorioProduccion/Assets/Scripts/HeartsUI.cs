@@ -13,14 +13,7 @@ public class HeartsUI : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.FindGameObjectWithTag("Body").GetComponent<BodyController>().canBeDamaged)
-        {
-            TranslateHealthToHearts();
-        }
-        else
-        {
-            TranslateHealthToHearts();
-        }
+        TranslateHealthToHearts();
     }
 
     private Image CreateHeartImage(Vector2 position, Sprite heartSprite)
@@ -41,6 +34,13 @@ public class HeartsUI : MonoBehaviour
 
     private Image AddFaceToUI(Sprite face)
     {
+        foreach (Transform child in transform)
+        {
+            if (child.name == "Face")
+            {
+                Destroy(child.gameObject);
+            }
+        }
         GameObject faceGameObject = new GameObject("Face", typeof(Image));
 
         faceGameObject.transform.SetParent(transform);
@@ -57,7 +57,13 @@ public class HeartsUI : MonoBehaviour
 
     private void TranslateHealthToHearts()
     {
-        transform.DetachChildren();
+        foreach (Transform child in transform)
+        {
+            if(child.name == "Heart")
+            {
+                Destroy(child.gameObject);
+            }
+        }
         var attachedBodyHealth = 0;
 
         if (GameObject.FindGameObjectWithTag("Body").GetComponent<BodyController>().isInputEnabled)
