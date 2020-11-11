@@ -767,7 +767,7 @@ AudioSource:
   m_GameObject: {fileID: 291482897}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 5f9ea182159605f4a8786115c8e5ebea, type: 2}
   m_audioClip: {fileID: 8300000, guid: 6f6531e2e2778ed47a2eff473a762e8c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -6092,18 +6092,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
-      propertyPath: moveSpeed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2618256798429158745, guid: c6e3fb348499e5c4982daf5f18ec7d11, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -6168,6 +6156,18 @@ PrefabInstance:
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 1623380701}
+    - target: {fileID: 528250081639302542, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453949943785021840, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5453949943785021871, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6e3fb348499e5c4982daf5f18ec7d11, type: 3}
 --- !u!1001 &8034124882370055611
