@@ -18,7 +18,7 @@ public class SwitchToSoul : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X)&&body.GetComponent<BodyController>().canBeDamaged) 
+        if (Input.GetKeyDown(KeyCode.X)&&body.GetComponent<BodyController>().canBeDamaged && !PauseMenu.isPaused) 
         {
 
             if (body.GetComponent<BodyController>().isInputEnabled)

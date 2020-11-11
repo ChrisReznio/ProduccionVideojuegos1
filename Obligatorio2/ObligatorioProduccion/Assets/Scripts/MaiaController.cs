@@ -23,7 +23,7 @@ public class MaiaController : MonoBehaviour
     }
     void Update()
     {
-        if (IsInputEnabled)
+        if (IsInputEnabled && !PauseMenu.isPaused)
         {
             if (!animator.GetBool("Is_attacking"))
             { 
