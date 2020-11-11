@@ -12,9 +12,7 @@ public class UpdatedSharkController : MonoBehaviour
     private Rigidbody2D myRigidBody;
     private GameObject body;
     private Transform target;
-    private bool inContactWithBody;
     private Animator animator;
-    private bool isAttacking;
 
 
     void Start()
@@ -54,7 +52,7 @@ public class UpdatedSharkController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.name == "Body")
         {
@@ -68,6 +66,11 @@ public class UpdatedSharkController : MonoBehaviour
     public void EnableIddle()
     {
         animator.SetBool("CanIddle", true);
+    }
+
+    public void KillShark()
+    {
+        Destroy(gameObject);
     }
 
     private bool BodyInSight()
@@ -91,5 +94,6 @@ public class UpdatedSharkController : MonoBehaviour
         }
         return normalized;
     }
+
 }
 
