@@ -2964,7 +2964,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942155297}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d29160f67c39d14a8789c09b209f773, type: 3}
   m_Name: 
@@ -4034,6 +4034,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hall
       objectReference: {fileID: 0}
+    - target: {fileID: 3382849218934312489, guid: 2dabbc5b7329b3d49a4139974b0ac370, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8602518520175096437, guid: 2dabbc5b7329b3d49a4139974b0ac370, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -4051,9 +4055,13 @@ GameObject:
   - component: {fileID: 1379999049}
   - component: {fileID: 1379999048}
   - component: {fileID: 1379999047}
+  - component: {fileID: 1379999050}
+  - component: {fileID: 1379999051}
+  - component: {fileID: 1379999052}
+  - component: {fileID: 1379999053}
   m_Layer: 0
   m_Name: Shark
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4114,11 +4122,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2111430961
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9ee948a7dcaa4b746b6d4ad30511c684, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8773585, g: 0.38405123, b: 0.38405123, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4135,13 +4143,92 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1379999046}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75, y: -6.24, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.05, y: -10.59, z: 250.05139}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 2019876426}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1379999050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379999046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e89f2958a12eed46b8d4d1977bc3329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  timeBetweenMove: 3
+  visionRange: 5
+--- !u!50 &1379999051
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379999046}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &1379999052
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379999046}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0136244, y: -0.49359012}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.84, y: 3.84}
+    newSize: {x: 5.84, y: 3.84}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.78303856, y: 1.0355244}
+  m_EdgeRadius: 0
+--- !u!1818360610 &1379999053
+ScaleConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379999046}
+  m_Enabled: 1
+  m_Weight: 1
+  m_ScaleAtRest: {x: 1, y: 1, z: 1}
+  m_ScaleOffset: {x: 1, y: 1, z: 1}
+  m_AffectScalingX: 1
+  m_AffectScalingY: 1
+  m_AffectScalingZ: 1
+  m_IsContraintActive: 1
+  m_IsLocked: 0
+  m_Sources: []
 --- !u!1 &1457571486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4945,7 +5032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021844, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_Name
-      value: Shark
+      value: Shark1
       objectReference: {fileID: 0}
     - target: {fileID: 5453949943785021844, guid: f4d5bfbddcfadfc4e84b59e1d7877aa3, type: 3}
       propertyPath: m_IsActive
@@ -5479,6 +5566,7 @@ Transform:
   - {fileID: 1047441418}
   - {fileID: 1514723343}
   - {fileID: 621003337}
+  - {fileID: 1379999049}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6156,11 +6244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395255227387353530, guid: 57a0d2a4d4c65e34e8d74378caf21ec3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.15
+      value: 3.57
       objectReference: {fileID: 0}
     - target: {fileID: 8395255227387353530, guid: 57a0d2a4d4c65e34e8d74378caf21ec3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.28
+      value: -6.45
       objectReference: {fileID: 0}
     - target: {fileID: 8395255227387353530, guid: 57a0d2a4d4c65e34e8d74378caf21ec3, type: 3}
       propertyPath: m_LocalPosition.z
