@@ -7,14 +7,13 @@ public class SwitchToBody : MonoBehaviour
     private GameObject soul;
     private GameObject body;
     private GameObject cam;
-    private GameObject hitbox;
+    public GameObject hitbox;
 
     void Start()
     {
         body = GameObject.FindGameObjectWithTag("Body");
         soul = GameObject.FindGameObjectWithTag("Soul");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
-        hitbox = GameObject.FindGameObjectWithTag("SoulBox");
     }
     
     void Update()
