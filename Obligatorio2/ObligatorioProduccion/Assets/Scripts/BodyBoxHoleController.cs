@@ -5,6 +5,7 @@ using UnityEngine;
 public class BodyBoxHoleController : MonoBehaviour
 {
     public Sprite newSprite;
+    private string GROUND_LAYER = "Ground";
 
     void Start() { }
 
@@ -25,6 +26,7 @@ public class BodyBoxHoleController : MonoBehaviour
         SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = newSprite;
         spriteRenderer.size = new Vector2(0.54f, 0.42f);
+        spriteRenderer.sortingLayerName = GROUND_LAYER;
         Vector3 position = this.transform.parent.transform.position;
         collision.gameObject.transform.position = position;
     }
