@@ -121,7 +121,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 4f46a59b1956c8a48b4b066ceb65d320, type: 2}
-    m_Threshold: 0.125
+    m_Threshold: 0.053571433
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -129,7 +129,7 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: 64a0f9e0f2a2c824aa414d714e05d969, type: 2}
-    m_Threshold: 0.25
+    m_Threshold: 0.107142866
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
     m_CycleOffset: 0
@@ -137,11 +137,43 @@ BlendTree:
     m_Mirror: 0
   - serializedVersion: 2
     m_Motion: {fileID: 7400000, guid: c4a2ab71ac1a5704f9e58f8d2ac695d1, type: 2}
-    m_Threshold: 0.375
+    m_Threshold: 0.16071428
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
     m_CycleOffset: 0
     m_DirectBlendParameter: Blend
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 65e10499bc95a2e4da8e262224818f44, type: 2}
+    m_Threshold: 0.21428573
+    m_Position: {x: 1, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: MovementX
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 65e10499bc95a2e4da8e262224818f44, type: 2}
+    m_Threshold: 0.26785713
+    m_Position: {x: 1, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: MovementX
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 64a0f9e0f2a2c824aa414d714e05d969, type: 2}
+    m_Threshold: 0.32142857
+    m_Position: {x: -1, y: 1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: MovementX
+    m_Mirror: 0
+  - serializedVersion: 2
+    m_Motion: {fileID: 7400000, guid: 64a0f9e0f2a2c824aa414d714e05d969, type: 2}
+    m_Threshold: 0.375
+    m_Position: {x: -1, y: -1}
+    m_TimeScale: 1
+    m_CycleOffset: 0
+    m_DirectBlendParameter: MovementX
     m_Mirror: 0
   m_BlendParameter: MovementX
   m_BlendParameterY: MovementY
@@ -633,7 +665,7 @@ AnimatorStateMachine:
     m_Position: {x: 160, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 853586514315586390}
-    m_Position: {x: 440, y: 100, z: 0}
+    m_Position: {x: 450, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6791984263254011123}
     m_Position: {x: 470, y: -80, z: 0}

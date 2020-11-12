@@ -117,6 +117,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5651661574061768728, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -2511844573765281328, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
       propertyPath: m_Name
       value: PisoT
@@ -124,6 +128,14 @@ PrefabInstance:
     - target: {fileID: 2979258239019455027, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875744859312857643, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1099583
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875744859312857643, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6328100620904979304, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -168,6 +180,10 @@ PrefabInstance:
     - target: {fileID: 6328100620904979304, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797713950612995150, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: d29492d8079e49949a7a0a5c0251246e, type: 3}

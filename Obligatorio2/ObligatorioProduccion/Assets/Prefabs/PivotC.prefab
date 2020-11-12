@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7621026583877449309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4219102267738698268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f41b1f0663a20b43adc21625429a877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5401750239456757376
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,8 +22,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5401750239456757407}
   - component: {fileID: 5401750239456757406}
-  - component: {fileID: 4824262331242574185}
-  m_Layer: 0
+  - component: {fileID: 772106068921597228}
+  m_Layer: 11
   m_Name: Cofre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +39,7 @@ Transform:
   m_GameObject: {fileID: 5401750239456757376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.2, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5401750240812342506}
   m_RootOrder: 1
@@ -69,10 +81,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -899472213
+  m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f13b35b3eac0b8847a20e7de5a3f5976, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 42c9e365d49ed3f41ad45449f3e6a011, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +95,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4824262331242574185
+--- !u!60 &772106068921597228
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +112,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.34, y: 3.03}
+    oldSize: {x: 1.35, y: 2.07}
     newSize: {x: 1.11, y: 1.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -108,39 +120,15 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.66999996, y: -0.79499996}
-      - {x: 0.76, y: -0.545}
-      - {x: 0.63, y: -0.45499998}
-      - {x: 0.62, y: 0.155}
-      - {x: 0.71, y: 0.325}
-      - {x: 0.74, y: 0.515}
-      - {x: 0.68, y: 0.565}
-      - {x: 0.61, y: 0.565}
-      - {x: 0.53999996, y: 0.48499998}
-      - {x: -0.5, y: 0.565}
-      - {x: -0.71, y: 0.565}
-      - {x: -0.78, y: 0.525}
-      - {x: -0.66999996, y: 0.155}
-      - {x: -0.65999997, y: -0.505}
-      - {x: -0.75, y: -0.525}
-      - {x: -0.72999996, y: -0.695}
-      - {x: -0.64, y: -0.965}
-      - {x: -0.78, y: -1.005}
-      - {x: -0.83, y: -1.0749999}
-      - {x: -0.83, y: -1.125}
-      - {x: -0.81, y: -1.145}
-      - {x: -0.63, y: -1.235}
-      - {x: -0.56, y: -1.235}
-      - {x: -0.44, y: -1.225}
-      - {x: -0.42999998, y: -1.175}
-      - {x: 0.28, y: -1.175}
-      - {x: 0.29999998, y: -1.2149999}
-      - {x: 0.32, y: -1.235}
-      - {x: 0.59, y: -1.235}
-      - {x: 0.81, y: -1.2049999}
-      - {x: 0.84999996, y: -1.185}
-      - {x: 0.84999996, y: -1.045}
-      - {x: 0.81, y: -0.955}
+    - - {x: 0.315, y: 0.035}
+      - {x: 0.275, y: 0.085}
+      - {x: -0.375, y: 0.085}
+      - {x: -0.36372578, y: -0.6803618}
+      - {x: -0.46200883, y: -0.8312498}
+      - {x: -0.46425208, y: -0.8573748}
+      - {x: 0.4261634, y: -0.8620292}
+      - {x: 0.465, y: -0.85499996}
+      - {x: 0.30959848, y: -0.7092023}
 --- !u!1 &5401750240812342507
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,18 +161,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7621026583877449309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4219102267738698268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f41b1f0663a20b43adc21625429a877, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5401750240819899024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -192,6 +168,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5401750240812342506}
     m_Modifications:
+    - target: {fileID: -7721158698011238717, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -4227975803932572340, guid: f051b925731c7634f93b435a1994c28e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.4
@@ -236,17 +216,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2469908875626563752, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -363434455792357858, guid: f051b925731c7634f93b435a1994c28e, type: 3}
       propertyPath: m_Name
       value: PisoCofre
+      objectReference: {fileID: 0}
+    - target: {fileID: -363434455792357858, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769714223981385600, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980417678897387483, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1099583
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980417678897387483, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3505343216155082062, guid: f051b925731c7634f93b435a1994c28e, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5198691761721647560, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5248575806578878700, guid: f051b925731c7634f93b435a1994c28e, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105243554683508876, guid: f051b925731c7634f93b435a1994c28e, type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -2695619058785784247, guid: f051b925731c7634f93b435a1994c28e, type: 3}

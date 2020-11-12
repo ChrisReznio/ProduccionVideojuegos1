@@ -20,7 +20,7 @@ public class HurtEnemy : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag == "Enemy"){
+        if(other.gameObject.tag == "EnemyHitbox"){
             if (body.GetComponent<BodyController>().isInputEnabled ||
                 soul.GetComponent<SoulController>().canDealDamage)
             {

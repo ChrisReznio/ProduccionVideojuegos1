@@ -55,13 +55,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: PisoI
       objectReference: {fileID: 0}
+    - target: {fileID: -4449795736151711397, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
+      propertyPath: m_Layer
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: -3535105356876067216, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -2216030348761979701, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1099583
+      objectReference: {fileID: 0}
+    - target: {fileID: -2216030348761979701, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -393141727246533532, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7809638416799851931, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9138121452466020971, guid: 987f667b7cbf09148ad7be48fac50e32, type: 3}
       propertyPath: m_LocalPosition.x
