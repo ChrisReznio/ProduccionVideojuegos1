@@ -2244,7 +2244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7999884402101721253, guid: 3a9fb5d6d78c75a47a9c4f13e2bd8de6, type: 3}
       propertyPath: m_TagString
-      value: Soul
+      value: SoulHitBox
       objectReference: {fileID: 0}
     - target: {fileID: 8247129195699933463, guid: 3a9fb5d6d78c75a47a9c4f13e2bd8de6, type: 3}
       propertyPath: m_Name
