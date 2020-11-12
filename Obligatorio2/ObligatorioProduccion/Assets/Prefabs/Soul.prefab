@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6518345799900321874}
   m_Layer: 8
   m_Name: Hitbox
-  m_TagString: SoulBox
+  m_TagString: SoulHitBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 569f2907e12a7684cb47fd384d5cb5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitbox: {fileID: 7999884402101721253}
 --- !u!114 &6518345799900321874
 MonoBehaviour:
   m_ObjectHideFlags: 0
