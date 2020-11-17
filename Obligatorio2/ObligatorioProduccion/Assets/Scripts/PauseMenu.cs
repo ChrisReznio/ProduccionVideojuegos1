@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
     public static bool isPaused;
+    public AudioMixer audioMixer;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -40,5 +43,18 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = false;
         SceneManager.LoadScene(0);
+    }
+
+    
+    public void SetVolume(float volume)
+    {
+        Debug.Log("volume");
+        audioMixer.SetFloat("volume", volume);
+    }
+
+    public void RestartLevel()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+        DeactivateMenuUI();
     }
 }
