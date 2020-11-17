@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1f3a5ad590dad694db9a13c50248721e
+guid: 566c274da116380489dc2e3f46c16ee5
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,19 +11,17 @@ ScriptedImporter:
   missingFiles: []
   errors: []
   warnings:
-  - Tileset 'WallSpritesheet' is an embedded tileset. Exported tilesets are preferred.
-  - Tileset 'Wall' is an embedded tileset. Exported tilesets are preferred.
+  - Tileset 'CoralSpritesheet' is an embedded tileset. Exported tilesets are preferred.
   missingSortingLayers: []
   missingLayers: []
   missingTags: []
   importerVersion: 21
   pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 50
+  numberOfObjectsImported: 34
   tilesAsObjects: 0
   sortingMode: 0
   isIsometric: 0
   customImporterClassName: 
   internalTilesets:
-  - {instanceID: 0}
   - {instanceID: 0}
