@@ -51,4 +51,10 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("volume");
         audioMixer.SetFloat("volume", volume);
     }
+
+    public void RestartLevel()
+    {
+        Application.LoadLevel(Application.loadedLevel);
+        DeactivateMenuUI();
+    }
 }
