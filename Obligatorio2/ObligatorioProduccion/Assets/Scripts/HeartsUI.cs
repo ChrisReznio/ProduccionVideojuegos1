@@ -24,7 +24,7 @@ public class HeartsUI : MonoBehaviour
         heartGameObject.transform.localPosition = Vector3.zero;
 
         heartGameObject.GetComponent<RectTransform>().anchoredPosition = position;
-        heartGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(960, 540);
+        heartGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(68, 59);
 
         Image heartImage = heartGameObject.GetComponent<Image>();
         heartImage.sprite = heartSprite;
@@ -46,8 +46,8 @@ public class HeartsUI : MonoBehaviour
         faceGameObject.transform.SetParent(transform);
         faceGameObject.transform.localPosition = Vector3.zero;
 
-        faceGameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(200, -50);
-        faceGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(480, 270);
+        faceGameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(450, -220);
+        faceGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(960, 540);
 
         Image faceImage = faceGameObject.GetComponent<Image>();
         faceImage.sprite = face;
@@ -89,11 +89,11 @@ public class HeartsUI : MonoBehaviour
         int count;
         for (count = 1; count <= completeHeartCount; count++)
         {
-            CreateHeartImage(new Vector2(110 + 110 * count, 5), completeHeartSprite);
+            CreateHeartImage(new Vector2(120 + 80 * count, -50), completeHeartSprite);
         }
         if (halfHeartCount == 1)
         {
-            CreateHeartImage(new Vector2(110 + 110 * count, 5), halfHeartSprite);
+            CreateHeartImage(new Vector2(120 + 80 * count, -50), halfHeartSprite);
         }
     }
 }
