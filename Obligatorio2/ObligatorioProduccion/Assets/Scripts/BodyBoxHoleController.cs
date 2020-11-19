@@ -25,7 +25,7 @@ public class BodyBoxHoleController : MonoBehaviour
     {
         SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = newSprite;
-        spriteRenderer.size = new Vector2(0.54f, 0.42f);
+        spriteRenderer.size = new Vector2(1.3f, 1.3f);
         spriteRenderer.sortingLayerName = GROUND_LAYER;
         Vector3 position = this.transform.parent.transform.position;
         collision.gameObject.transform.position = position;
