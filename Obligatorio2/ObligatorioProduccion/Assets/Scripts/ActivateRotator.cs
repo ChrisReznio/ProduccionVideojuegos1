@@ -10,10 +10,12 @@ public class ActivateRotator : MonoBehaviour
     private float waitCounter;
     private float waitTime;
     private bool waiting;
+    private float offsetY;
     //private bool rotating;
     // Start is called before the first frame update
     void Start()
     {
+        offsetY = 0.76f;
         body = GameObject.FindGameObjectWithTag("Body");
         waitTime = 30;
         waitCounter = 0;
@@ -32,7 +34,7 @@ public class ActivateRotator : MonoBehaviour
             Vector3 bodyPosition = body.transform.position;
 
             if ((bodyPosition.x > position.x + 2.40 || bodyPosition.x <= position.x - 2.40)
-                || (bodyPosition.y > position.y + 2.40 || bodyPosition.y <= position.y - 2.40))
+                || (bodyPosition.y > position.y + 2.40 + offsetY || bodyPosition.y <= position.y - 2.40 + offsetY))
             {
                 rotator.GetComponent<Animator>().SetBool("Pressed", true);
                 rotator.transform.parent.gameObject.transform.Rotate(new Vector3(0, 0, 90));
