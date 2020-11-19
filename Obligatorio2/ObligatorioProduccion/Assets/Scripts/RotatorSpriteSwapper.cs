@@ -37,8 +37,6 @@ public class RotatorSpriteSwapper : MonoBehaviour
     private bool IsBodyInRange()
     {
         Vector3 bodyPosition = body.transform.position;
-        Debug.Log("xbody: " + bodyPosition.x);
-        Debug.Log("xrotator: " + this.transform.position.x);
         if ((bodyPosition.x > this.transform.position.x + 2.40 || bodyPosition.x <= this.transform.position.x - 2.40)
                 || (bodyPosition.y > this.transform.position.y + 2.40 || bodyPosition.y <= this.transform.position.y - 2.40))
         {
