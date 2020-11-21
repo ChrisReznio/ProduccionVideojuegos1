@@ -54,7 +54,7 @@ public class UpdatedSharkController : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Body")
+        if (collision.gameObject.tag == "Body")
         {
             animator.SetBool("IsMoving", false);
             animator.SetBool("CanIddle", false);
