@@ -6,10 +6,11 @@ public class RotatorSpriteSwapper : MonoBehaviour
 {
     public GameObject body;
     public Animator animator;
+    private float offsetY;
     // Start is called before the first frame update
     void Start()
     {
-
+        offsetY = 0.76f;
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class RotatorSpriteSwapper : MonoBehaviour
     {
         Vector3 bodyPosition = body.transform.position;
         if ((bodyPosition.x > this.transform.position.x + 2.40 || bodyPosition.x <= this.transform.position.x - 2.40)
-                || (bodyPosition.y > this.transform.position.y + 2.40 || bodyPosition.y <= this.transform.position.y - 2.40))
+                || (bodyPosition.y > this.transform.position.y + 2.40 + offsetY || bodyPosition.y <= this.transform.position.y - 2.40 + offsetY))
         {
             return false;
         }
