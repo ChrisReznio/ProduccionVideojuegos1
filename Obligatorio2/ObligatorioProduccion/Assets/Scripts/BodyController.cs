@@ -20,7 +20,7 @@ public class BodyController : MonoBehaviour
     public GameObject throwableSpear;
     public float skillThrowSpearCooldown;
     public float throwSpearInterCooldown;
-    private float spearRotationOffset;
+    public GameObject throwingPoint;
 
     public float dashSpeed;
     private bool dashing;
@@ -35,7 +35,6 @@ public class BodyController : MonoBehaviour
         myRigidbody= GetComponent<Rigidbody2D>();
 
         throwSpearInterCooldown = 0;
-        spearRotationOffset = 225;
 
         dashing = false;
         dashInternCooldown = 0;
@@ -43,10 +42,16 @@ public class BodyController : MonoBehaviour
 
     void Update()
     {
+        
         if (PauseMenu.isPaused)
         {
             return;
         }
+        if (anim.GetBool("Dying"))
+        {
+            return;
+        }
+
         bodyMoving = false;
 
         if(!dashing){
@@ -76,14 +81,9 @@ public class BodyController : MonoBehaviour
                     anim.SetBool("PlayerAttacking", true);
 
                 }else if(Input.GetKeyDown(KeyCode.K) && throwSpearInterCooldown <= 0){
+                    anim.SetBool("ThrowingSpear", true);
                     throwSpearInterCooldown = skillThrowSpearCooldown;
-                    Vector2 velocity = new Vector2(anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY"));
-                    Spear spear = Instantiate(throwableSpear, transform.position, Quaternion.identity).GetComponent<Spear>();
-                    float zRotation = Mathf.Atan2(-anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY")) * Mathf.Rad2Deg;
-                    spear.Setup(velocity, new Vector3(0,0, zRotation + spearRotationOffset));
-
                 }
-                
             }
 
             if (Input.GetKeyDown(KeyCode.L) && dashInternCooldown <= 0)
@@ -133,5 +133,19 @@ public class BodyController : MonoBehaviour
 
         anim.SetBool("PlayerMoving", bodyMoving);
         anim.SetBool("PlayerDashing", dashing);
+    }
+
+
+    public void ThrowSpear()
+    {
+        Vector2 velocity = new Vector2(anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY"));
+        Spear spear = Instantiate(throwableSpear, throwingPoint.transform.position, Quaternion.identity).GetComponent<Spear>();
+        float zRotation = Mathf.Atan2(-anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY")) * Mathf.Rad2Deg;
+        spear.Setup(velocity, new Vector3(0, 0, zRotation));
+    }
+
+    public void FinishThrowSpear()
+    {
+        anim.SetBool("ThrowingSpear", false);
     }
 }
