@@ -23,8 +23,7 @@ public class LineController : MonoBehaviour
         line.endWidth = 0.0f;
         line.material = new Material(Shader.Find("Sprites/Default"));
 
-        line.sortingLayerName = "Player";
-        line.sortingOrder = 1;
+        line.sortingLayerName = "WorldObject";
 
         line.startColor = line.endColor = new Color(1, 0, 0, 1);
      
@@ -39,7 +38,7 @@ public class LineController : MonoBehaviour
 
         // Populate the alpha  keys at relative time 0 and 1  (0 and 100%)
         alphaKey = new GradientAlphaKey[2];
-        alphaKey[0].alpha = 0.15f;
+        alphaKey[0].alpha = 0.35f;
         alphaKey[0].time = 1.0f;
         alphaKey[1].alpha = 0.2f;
         alphaKey[1].time = 1.0f;
@@ -58,8 +57,8 @@ public class LineController : MonoBehaviour
 
         if (body.GetComponent<BodyController>().canBeDamaged && soul.GetComponent<SoulController>().IsInputEnabled)
         {
-            line.startWidth = 0.1f;
-            line.endWidth = 0.2f;
+            line.startWidth = 0.08f;
+            line.endWidth = 0.12f;
             
             line.SetPosition(0, body.transform.localPosition);
             line.SetPosition(1, soul.transform.localPosition);
