@@ -47,7 +47,7 @@ public class SwitchToSoul : MonoBehaviour
         soul.transform.localScale = new Vector3(1, 1, 0);
         soul.GetComponent<SoulController>().IsInputEnabled = true;
         soul.GetComponent<SoulController>().canDealDamage = true;
-        soul.transform.position = body.transform.position + new Vector3(2, 2, 0);
+        soul.transform.position = body.transform.position + new Vector3(0, 1, 0);
         cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
     }
@@ -62,7 +62,7 @@ public class SwitchToSoul : MonoBehaviour
         soul.GetComponent<SoulController>().IsInputEnabled = true;
         soul.GetComponent<SoulController>().canDealDamage = false;
 
-        soul.transform.position = body.transform.position + new Vector3(2, 2, 0);
+        soul.transform.position = body.transform.position + new Vector3(0, 0, 0);
 
         cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
