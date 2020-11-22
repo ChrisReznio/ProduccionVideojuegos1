@@ -17,19 +17,16 @@ public class SoulBoxHoleController : MonoBehaviour
         if (collision.gameObject.tag == "SoulBox")
         {
             transform.parent.GetComponent<BoxCollider2D>().enabled = false;
-            collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            FillHole(collision);
+            collision.gameObject.active = false;
+            FillHole();
         }
     }
 
-    void FillHole(Collider2D collision)
+    void FillHole()
     {
-        SpriteRenderer spriteRenderer = collision.gameObject.GetComponent<SpriteRenderer>();
+        SpriteRenderer spriteRenderer = gameObject.transform.parent.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = newSprite;
         spriteRenderer.size = new Vector2(1.3f, 1.3f);
         spriteRenderer.sortingLayerName = GROUND_LAYER;
-        spriteRenderer.sortingOrder = LAYER_ORDER;
-        Vector3 position = this.transform.parent.transform.position;
-        collision.gameObject.transform.position = position;
     }
 }
