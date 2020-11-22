@@ -11,5 +11,10 @@ public class EnemyToFloorAtachment : MonoBehaviour
             collider.transform.SetParent(null);
             collider.transform.SetParent(transform.parent.parent.parent.parent);
         }
+        if (collider.gameObject.tag == "BoxRotatorCollider")
+        {
+            collider.transform.parent.SetParent(null);
+            collider.transform.parent.SetParent(transform.parent.parent.parent.parent);
+        }
     }
 }

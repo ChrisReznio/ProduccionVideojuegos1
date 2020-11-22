@@ -36,12 +36,36 @@ public class ActivateRotator : MonoBehaviour
             if ((bodyPosition.x > position.x + 2.40 || bodyPosition.x <= position.x - 2.40)
                 || (bodyPosition.y > position.y + 2.40 + offsetY || bodyPosition.y <= position.y - 2.40 + offsetY))
             {
+                foreach (Transform child in rotator.transform.parent.gameObject.transform)
+                {
+                    if (child.tag == "BodyBox" || child.tag == "SoulBox")
+                    {
+                        Vector3 childPosition = child.transform.position;
+                        if (childPosition.x > position.x + 1.6f)
+                        {
+                            child.position = new Vector3(position.x + 1.6f, child.position.y, 0);
+                        }
+                        else if (childPosition.x < position.x - 1.6f)
+                        {
+                            child.position = new Vector3(position.x - 1.6f, child.position.y, 0);
+                        }
+
+                        if (childPosition.y > position.y + 1.6f)
+                        {
+                            child.position = new Vector3(child.position.x, position.y + 1.6f, 0);
+                        }
+                        else if (childPosition.y < position.y - 1.6f)
+                        {
+                            child.position = new Vector3(child.position.x, position.y - 1.6f, 0);
+                        }
+                    }
+                }
                 rotator.GetComponent<Animator>().SetBool("Pressed", true);
                 rotator.transform.parent.gameObject.transform.Rotate(new Vector3(0, 0, 90));
                 rotator.transform.Rotate(new Vector3(0, 0, -90));
                 foreach (Transform child in rotator.transform.parent.gameObject.transform)
                 {
-                    if(child.tag == "Enemy")
+                    if(child.tag == "Enemy" || child.tag ==  "BodyBox" || child.tag == "SoulBox")
                     {
                         child.Rotate(0, 0, -90);
                     }

@@ -12,7 +12,6 @@ public class DialogTrigger : MonoBehaviour
         {
             TriggerDialog();
             this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            Debug.Log("entro");
         }
     }
 

@@ -15,6 +15,7 @@ TagManager:
   - EnemyHitbox
   - EnemyAttack
   - SoulHitBox
+  - BoxRotatorCollider
   layers:
   - Default
   - TransparentFX
