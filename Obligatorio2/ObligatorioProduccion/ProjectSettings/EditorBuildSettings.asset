@@ -12,11 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: a3e71d15b1ef9ca46961aeb868842252
   - enabled: 1
-    path: Assets/Scenes/LaberintoCajas.unity
+    path: Assets/Scenes/Nivel1.unity
     guid: 90fd7c5a92408e745a6e1c771ac21afa
   - enabled: 1
-    path: Assets/Scenes/Laberinto.unity
+    path: Assets/Scenes/Nivel2.unity
     guid: 3c64dcf51d9cacb4ba5e6e73433427b3
+  - enabled: 1
+    path: Assets/Scenes/Nivel3.unity
+    guid: 8b6a9498fc562de43ace7af06bf79523
   - enabled: 1
     path: Assets/Scenes/GameWon.unity
     guid: 2714030f96178dc43af5f1f26b9e2cf2

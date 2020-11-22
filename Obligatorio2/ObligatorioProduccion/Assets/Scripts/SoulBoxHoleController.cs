@@ -6,6 +6,7 @@ public class SoulBoxHoleController : MonoBehaviour
 {
     public Sprite newSprite;
     private string GROUND_LAYER = "Ground";
+    private int LAYER_ORDER = 1;
 
     void Start() { }
 
@@ -27,6 +28,7 @@ public class SoulBoxHoleController : MonoBehaviour
         spriteRenderer.sprite = newSprite;
         spriteRenderer.size = new Vector2(1.3f, 1.3f);
         spriteRenderer.sortingLayerName = GROUND_LAYER;
+        spriteRenderer.sortingOrder = LAYER_ORDER;
         Vector3 position = this.transform.parent.transform.position;
         collision.gameObject.transform.position = position;
     }
