@@ -38,7 +38,7 @@ public class ActivateRotator : MonoBehaviour
             {
                 foreach (Transform child in rotator.transform.parent.gameObject.transform)
                 {
-                    if (child.tag == "BodyBox" || child.tag == "SoulBox")
+                    if (child.tag == "BodyBox" || child.tag == "SoulBox" || child.tag == "Enemy")
                     {
                         Vector3 childPosition = child.transform.position;
                         if (childPosition.x > position.x + 1.6f)

@@ -16,6 +16,7 @@ TagManager:
   - EnemyAttack
   - SoulHitBox
   - BoxRotatorCollider
+  - Spark
   layers:
   - Default
   - TransparentFX
