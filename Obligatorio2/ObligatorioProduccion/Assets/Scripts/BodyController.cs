@@ -49,6 +49,7 @@ public class BodyController : MonoBehaviour
         }
         if (anim.GetBool("Dying"))
         {
+            myRigidbody.velocity = Vector2.zero;
             return;
         }
 
