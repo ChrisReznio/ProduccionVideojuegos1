@@ -8,11 +8,15 @@ public class SwitchToSoul : MonoBehaviour
     private GameObject body;
     private GameObject cam;
 
+    private GameObject audioSource;
+
     void Start()
     {
        body = GameObject.FindGameObjectWithTag("Body");
        soul   = GameObject.FindGameObjectWithTag("Soul");
        cam = GameObject.FindGameObjectWithTag("MainCamera");
+       audioSource = GameObject.FindGameObjectWithTag("Source");
+
     }
 
 
@@ -42,6 +46,7 @@ public class SwitchToSoul : MonoBehaviour
 
     public void SwitchSoulOnCommand() 
     {
+        audioSource.GetComponent<AudioController>().Separate();
         soul.transform.GetChild(0).GetComponent<ActivateRotator>().enabled = true;
         body.GetComponent<BodyController>().isInputEnabled = false;
         soul.transform.localScale = new Vector3(1, 1, 0);
@@ -62,11 +67,12 @@ public class SwitchToSoul : MonoBehaviour
         soul.GetComponent<SoulController>().IsInputEnabled = true;
         soul.GetComponent<SoulController>().canDealDamage = false;
 
-        soul.transform.position = body.transform.position + new Vector3(0, 0, 0);
-
+       
         cam.GetComponent<CameraController>().followTarget = GameObject.Find("Soul");
 
         RespawnBody();
+
+        soul.transform.position = body.transform.position + new Vector3(0, 0, 0);
     }
 
     void RespawnBody() {

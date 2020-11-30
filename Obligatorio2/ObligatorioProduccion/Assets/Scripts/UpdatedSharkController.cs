@@ -13,6 +13,8 @@ public class UpdatedSharkController : MonoBehaviour
     private GameObject body;
     private Transform target;
     private Animator animator;
+    private GameObject audioSource;
+
 
 
     void Start()
@@ -22,6 +24,7 @@ public class UpdatedSharkController : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetBool("CanIddle", true);
+        audioSource = GameObject.FindGameObjectWithTag("Source");
     }
 
 
@@ -60,6 +63,7 @@ public class UpdatedSharkController : MonoBehaviour
             animator.SetBool("CanIddle", false);
             animator.SetTrigger("IsAttacking");
             timeBetweenMoveCounter = timeBetweenMove;
+            audioSource.GetComponent<AudioController>().Shark();
         }
     }
 
