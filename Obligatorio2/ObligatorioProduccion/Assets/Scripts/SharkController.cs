@@ -15,7 +15,6 @@ public class SharkController : MonoBehaviour
     private bool inContactWithBody;
     private Animator animator;
 
-
     void Start()
     {
         body = GameObject.FindGameObjectWithTag("Body");

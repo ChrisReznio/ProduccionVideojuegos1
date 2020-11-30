@@ -29,10 +29,13 @@ public class BodyController : MonoBehaviour
     public float skillDashCooldown;
     public float dashInternCooldown;
 
+    private GameObject audioSource;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         myRigidbody= GetComponent<Rigidbody2D>();
+        audioSource = GameObject.FindGameObjectWithTag("Source");
 
         throwSpearInterCooldown = 0;
 
@@ -79,16 +82,19 @@ public class BodyController : MonoBehaviour
                     attackTimeCounter = attackTime;
                     attacking =  true;
                     myRigidbody.velocity = Vector2.zero;
+                    audioSource.GetComponent<AudioController>().Swing();
                     anim.SetBool("PlayerAttacking", true);
 
                 }else if(Input.GetKeyDown(KeyCode.K) && throwSpearInterCooldown <= 0){
                     anim.SetBool("ThrowingSpear", true);
+                    audioSource.GetComponent<AudioController>().Throw();
                     throwSpearInterCooldown = skillThrowSpearCooldown;
                 }
             }
 
             if (Input.GetKeyDown(KeyCode.L) && dashInternCooldown <= 0)
             {
+                audioSource.GetComponent<AudioController>().Dash();
                 actualDashRange = 0;
                 Vector2 velocity = ((new Vector2(-anim.GetFloat("LastMoveX"), -anim.GetFloat("LastMoveY"))).normalized) * dashSpeed;
                 myRigidbody.velocity = velocity;

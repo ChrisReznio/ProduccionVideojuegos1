@@ -4,23 +4,54 @@ using UnityEngine;
 
 public class AudioController : MonoBehaviour
 {
-    public AudioSource source1;
-    public AudioSource source2;
+    public AudioSource separate;
+    public AudioSource swing;
+    public AudioSource dash;
+    public AudioSource throw1;
+    public AudioSource fischl;
+    public AudioSource shark;
+    public AudioSource victory;
+
+
+    private GameObject soul;
+    private GameObject body;
+
 
     void Start()
     {
-      
+        soul = GameObject.Find("Soul");
+        body = GameObject.Find("Body");
     }
 
-    void Update()
+    public void Separate() {
+        separate.Play();
+    }
+
+    public void Swing() {
+        swing.Play();
+    }
+
+    public void Dash() {
+        dash.Play();
+    }
+
+    public void Throw()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            source1.Play();
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            source2.Play();
-        }
+        throw1.Play();
+    }
+
+    public void Fish()
+    {
+        fischl.Play();
+    }
+
+    public void Shark()
+    {
+        shark.Play();
+    }
+
+    public void Victory()
+    {
+        victory.Play();
     }
 }

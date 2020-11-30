@@ -14,7 +14,7 @@ public class FishController : MonoBehaviour
     private GameObject body;
     private Transform target;
     private Animator animator;
-
+    private GameObject audioSource;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class FishController : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetBool("CanIddle", true);
+        audioSource = GameObject.FindGameObjectWithTag("Source");
     }
 
 
@@ -57,6 +58,7 @@ public class FishController : MonoBehaviour
                     animator.SetBool("IsMoving", false);
                     animator.SetBool("CanIddle", false);
                     animator.SetBool("IsAttacking", true);
+                    
                     timeBetweenMoveCounter = timeBetweenMove;
                 }
                 else
@@ -92,9 +94,11 @@ public class FishController : MonoBehaviour
             if (child.tag == "Spark")
             {
                 child.position = new Vector2(positionX, positionY);
+                
                 child.transform.gameObject.SetActive(true);
             }
         }
+        audioSource.GetComponent<AudioController>().Fish();
     }
 
     private bool BodyInSight()

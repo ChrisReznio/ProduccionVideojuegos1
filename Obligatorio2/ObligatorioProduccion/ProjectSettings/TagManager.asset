@@ -17,6 +17,7 @@ TagManager:
   - SoulHitBox
   - BoxRotatorCollider
   - Spark
+  - Source
   layers:
   - Default
   - TransparentFX
