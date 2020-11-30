@@ -11,6 +11,7 @@ public class AudioController : MonoBehaviour
     public AudioSource fischl;
     public AudioSource shark;
     public AudioSource victory;
+    public AudioSource death;
 
 
     private GameObject soul;
@@ -53,5 +54,10 @@ public class AudioController : MonoBehaviour
     public void Victory()
     {
         victory.Play();
+    }
+
+    public void Die() 
+    {
+        death.Play();
     }
 }
