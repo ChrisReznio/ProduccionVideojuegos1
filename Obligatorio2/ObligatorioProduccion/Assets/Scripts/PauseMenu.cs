@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     public static bool isPaused;
     public AudioMixer audioMixer;
+    public GameObject audioSource;
     private bool isMenuOpen = false;
 
     void Update()
@@ -44,6 +45,7 @@ public class PauseMenu : MonoBehaviour
         isMenuOpen = true;
         Time.timeScale = 0;
         pauseMenuUI.SetActive(true);
+        audioSource.SetActive(false);
     }
 
     public void DeactivateMenuUI()
@@ -51,6 +53,7 @@ public class PauseMenu : MonoBehaviour
         isMenuOpen = false;
         Time.timeScale = 1;
         pauseMenuUI.SetActive(false);
+        audioSource.SetActive(true);
         isPaused = false;
     }
 
