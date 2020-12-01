@@ -196,7 +196,7 @@ RectTransform:
   m_Children:
   - {fileID: 1466725160}
   m_Father: {fileID: 687781440}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -324,7 +324,7 @@ RectTransform:
   - {fileID: 1098195098}
   - {fileID: 1459422314}
   m_Father: {fileID: 687781440}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -401,10 +401,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - There is an obstacle up your way!
-    - Try pushing the GIANT SHELL to fill the HOLE so your body may pass. Be careful,
-    - if you make the wrong move you will need to RESET the level from the pause
-      menu!
+    - There is an obstacle up your way! Try pushing the GIANT SHELL to fill the HOLE
+      so your BODY may pass.
+    - ' Be careful, if you make the wrong move you will need to RESET the level from
+      the pause menu!'
     - RED COLOUR indicates that only your BODY may interact with that OBJECT. Your
       SOUL will go right through it!
 --- !u!61 &327035335
@@ -611,7 +611,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498844449948900646, guid: 93a409e2362533b40b212cee55c119a5, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 498844449948900646, guid: 93a409e2362533b40b212cee55c119a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -935,11 +935,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 429204250}
   - {fileID: 1066081463}
   - {fileID: 301634100}
   - {fileID: 190697056}
   - {fileID: 1575849289}
+  - {fileID: 429204250}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1283,12 +1283,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Nice! 2 more steps to go!
     - There is an ENEMY ahead!, they will target your BODY, so be sure you dont shift
-      to SPIRIT FORM while fighting!
-    - 'Try to kill him with your BODY attacks! '
-    - With J you can swing your spear, with K you can thow a javeline, and with L
-      you can dash to safety!
+      to your SOUL while fighting!
+    - Try to kill him with your BODY attacks! Swing your spear with J, throw it with
+      K, and dash to safety with L
 --- !u!61 &1011899379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1475,7 +1473,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 687781440}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1495,7 +1493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maiaFaceSprite: {fileID: 21300000, guid: 3df7b9632bbfc1a4e88b3b0345e14afc, type: 3}
-  bodyFaceSprite: {fileID: 21300000, guid: 3df7b9632bbfc1a4e88b3b0345e14afc, type: 3}
+  bodyFaceSprite: {fileID: 21300000, guid: e56904f4d61de9846bfb818dc882b3cc, type: 3}
   completeHeartSprite: {fileID: 21300000, guid: 185c1a346c4f15246b3e525098a52b69, type: 3}
   halfHeartSprite: {fileID: 21300000, guid: b1709013526b4754596a0643219b8511, type: 3}
   bodyHealthManager: {fileID: 655045845}
@@ -1828,10 +1826,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - We are almost there! you just need to reach the other side!
-    - Find a way to move that platform with your SOUL so your BODY can pass through!
     - 'There is a BLUE BUTTON over the wooden platform, you can PRESS BUTTONS with
-      the Z key, try and see what happens. '
+      the Z key, try and see if you can create a path. '
 --- !u!61 &1307831850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1904,12 +1900,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Well done Maia, we are halfway through!
-    - Now we have a BLUE HOLE ahead. BLUE OBJECTS may interact only with your SPIRIT,
+    - Now we have a BLUE HOLE ahead. BLUE OBJECTS may interact only with your SOUL,
       your BODY won't be able to move them!
     - But there is another problem... your path is blocked by WATER, your BODY's
       worst nightmare
-    - However, your SPIRIT will float over it, so there might be a way you can push
+    - However, your SOUL will float over it, so there might be a way you can push
       the BLUE SHELL somehow...
 --- !u!61 &1356631290
 BoxCollider2D:
@@ -2353,7 +2348,7 @@ RectTransform:
   m_Children:
   - {fileID: 1463011402}
   m_Father: {fileID: 687781440}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3192,8 +3187,7 @@ MonoBehaviour:
     sentences:
     - 'You have formed a link between your soul and that body. In this world such
       links are called lifelines. '
-    - You can PRESS X to take spiritual form and PRESS X AGAIN to return to your
-      body.
+    - You can PRESS X to take SOUL form and PRESS X AGAIN to return to your BODY.
     - You can move both your SOUL or BODY with WASD or the ARROW KEYS.
 --- !u!1 &2065114898
 GameObject:

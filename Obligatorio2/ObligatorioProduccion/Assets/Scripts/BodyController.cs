@@ -41,6 +41,9 @@ public class BodyController : MonoBehaviour
 
         dashing = false;
         dashInternCooldown = 0;
+
+        anim.SetFloat("LastMoveX", 0);
+        anim.SetFloat("LastMoveY", -1);
     }
 
     void Update()
@@ -76,6 +79,12 @@ public class BodyController : MonoBehaviour
                 {
                     myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, Input.GetAxisRaw("Vertical") * moveSpeed);
                     lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+                    anim.SetFloat("MoveX", lastMove.x);
+                    anim.SetFloat("MoveY", lastMove.y);
+
+                    anim.SetFloat("LastMoveX", lastMove.x);
+                    anim.SetFloat("LastMoveY", lastMove.y);
                 }
                 if(Input.GetKeyDown(KeyCode.J))
                 {
@@ -113,11 +122,7 @@ public class BodyController : MonoBehaviour
                 anim.SetBool("PlayerAttacking", false);
             }
        
-            anim.SetFloat("MoveX", lastMove.x);
-            anim.SetFloat("MoveY", lastMove.y);
-            
-            anim.SetFloat("LastMoveX", lastMove.x);
-            anim.SetFloat("LastMoveY", lastMove.y);
+
         }
 
         if (throwSpearInterCooldown > 0)
