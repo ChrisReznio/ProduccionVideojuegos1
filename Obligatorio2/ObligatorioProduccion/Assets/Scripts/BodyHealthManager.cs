@@ -36,4 +36,13 @@ public class BodyHealthManager : MonoBehaviour
         gameObject.GetComponent<SwitchToSoul>().SwitchToSoulAfterDeath();
         anim.SetBool("Dying", false);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Heart")
+        {
+            currentHealth += 10;
+            collision.gameObject.active = false;
+        }
+    }
 }

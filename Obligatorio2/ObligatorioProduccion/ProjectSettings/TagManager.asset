@@ -18,6 +18,7 @@ TagManager:
   - BoxRotatorCollider
   - Spark
   - Source
+  - Heart
   layers:
   - Default
   - TransparentFX
