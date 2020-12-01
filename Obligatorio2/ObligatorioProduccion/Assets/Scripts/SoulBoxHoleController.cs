@@ -26,7 +26,7 @@ public class SoulBoxHoleController : MonoBehaviour
     {
         SpriteRenderer spriteRenderer = gameObject.transform.parent.GetComponent<SpriteRenderer>();
         spriteRenderer.sprite = newSprite;
-        spriteRenderer.size = new Vector2(1.3f, 1.3f);
+        spriteRenderer.size = new Vector2(1.2f, 1.2f);
         spriteRenderer.sortingLayerName = GROUND_LAYER;
     }
 }
