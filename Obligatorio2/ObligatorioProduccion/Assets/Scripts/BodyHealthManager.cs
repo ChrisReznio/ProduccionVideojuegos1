@@ -11,7 +11,7 @@ public class BodyHealthManager : MonoBehaviour
 
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = StaticValues.ActualLife;
         anim = GetComponent<Animator>();
         audioSource = GameObject.FindGameObjectWithTag("Source");
     }
@@ -19,6 +19,7 @@ public class BodyHealthManager : MonoBehaviour
     public void HurtBody(int damage)
     {
         currentHealth -= damage;
+        StaticValues.ActualLife = currentHealth;
         if (currentHealth <= 0)
         {
             audioSource.GetComponent<AudioController>().Die();
@@ -35,5 +36,15 @@ public class BodyHealthManager : MonoBehaviour
     {
         gameObject.GetComponent<SwitchToSoul>().SwitchToSoulAfterDeath();
         anim.SetBool("Dying", false);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Heart")
+        {
+            currentHealth += 10;
+            StaticValues.ActualLife = currentHealth;
+            collision.gameObject.active = false;
+        }
     }
 }
