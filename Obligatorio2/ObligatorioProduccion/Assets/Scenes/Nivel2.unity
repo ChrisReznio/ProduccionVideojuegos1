@@ -1609,6 +1609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37db5b37e9058ba42936dbc13500f5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifelineParticles: {fileID: 8821804200547153475, guid: 928e1837bc84c984fbe3a7026f52c553, type: 3}
 --- !u!4 &352427374
 Transform:
   m_ObjectHideFlags: 0
