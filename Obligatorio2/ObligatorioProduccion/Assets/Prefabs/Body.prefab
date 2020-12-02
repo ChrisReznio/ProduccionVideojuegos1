@@ -185,9 +185,9 @@ MonoBehaviour:
   skillThrowSpearCooldown: 6
   throwSpearInterCooldown: 0
   throwingPoint: {fileID: 1025338639194969465}
-  dashSpeed: 10
-  dashRange: 2
-  skillDashCooldown: 1
+  dashSpeed: 12
+  dashRange: 2.5
+  skillDashCooldown: 1.5
   dashInternCooldown: 0
 --- !u!212 &780230123812750691
 SpriteRenderer:

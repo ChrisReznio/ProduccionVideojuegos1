@@ -44,6 +44,10 @@ public class BodyController : MonoBehaviour
 
         anim.SetFloat("LastMoveX", 0);
         anim.SetFloat("LastMoveY", -1);
+        anim.SetBool("PlayerAttacking", false);
+        anim.SetBool("ThrowingSpear", false);
+        anim.SetBool("PlayerMoving", false);
+        anim.SetBool("PlayerDashing", false);
     }
 
     void Update()
@@ -105,7 +109,7 @@ public class BodyController : MonoBehaviour
             {
                 audioSource.GetComponent<AudioController>().Dash();
                 actualDashRange = 0;
-                Vector2 velocity = ((new Vector2(-anim.GetFloat("LastMoveX"), -anim.GetFloat("LastMoveY"))).normalized) * dashSpeed;
+                Vector2 velocity = ((new Vector2(anim.GetFloat("LastMoveX"), anim.GetFloat("LastMoveY"))).normalized) * dashSpeed;
                 myRigidbody.velocity = velocity;
                 dashing = true;
                 dashInternCooldown = skillDashCooldown;
