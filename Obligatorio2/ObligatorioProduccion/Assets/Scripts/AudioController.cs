@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioController : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class AudioController : MonoBehaviour
     public AudioSource shark;
     public AudioSource victory;
     public AudioSource death;
+
+    public AudioMixer audioMixer;
 
 
     private GameObject soul;

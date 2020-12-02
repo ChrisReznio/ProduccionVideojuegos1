@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,7 +12,12 @@ public class PauseMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public GameObject audioSource;
     private bool isMenuOpen = false;
+    public Slider slider;
 
+    private void Start()
+    {
+       slider.value = PlayerPrefs.GetFloat("volume");
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !DialogManager.isDialogActive)
@@ -67,6 +73,7 @@ public class PauseMenu : MonoBehaviour
     public void SetVolume(float volume)
     {
         audioMixer.SetFloat("volume", volume);
+        PlayerPrefs.SetFloat("volume", volume);
     }
 
     public void RestartLevel()

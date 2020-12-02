@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5468330140417120287, guid: 152a5fc5215b0af449e7e6c423deb72c, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 5f9ea182159605f4a8786115c8e5ebea, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152a5fc5215b0af449e7e6c423deb72c, type: 3}
 --- !u!1 &38012009 stripped
@@ -1819,6 +1823,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93a409e2362533b40b212cee55c119a5, type: 3}
+--- !u!114 &991920058 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 498844450340206034, guid: 93a409e2362533b40b212cee55c119a5, type: 3}
+  m_PrefabInstance: {fileID: 991920057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &999032395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2058,10 @@ PrefabInstance:
       propertyPath: audioSource
       value: 
       objectReference: {fileID: 38012009}
+    - target: {fileID: 97169843573543846, guid: 1a9a1c61805239241991cea479396bab, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 991920058}
     - target: {fileID: 97169843573543847, guid: 1a9a1c61805239241991cea479396bab, type: 3}
       propertyPath: m_LocalPosition.x
       value: 938.81744
