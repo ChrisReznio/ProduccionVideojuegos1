@@ -16,7 +16,7 @@ public class BodyBoxHoleController : MonoBehaviour
         if (collision.gameObject.tag == "BodyBox")
         {
             transform.parent.GetComponent<BoxCollider2D>().enabled = false;
-            collision.gameObject.active = false;
+            collision.gameObject.SetActive(false);
             FillHole();
         }
     }
