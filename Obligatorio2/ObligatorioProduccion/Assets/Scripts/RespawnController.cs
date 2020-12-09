@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RespawnController : MonoBehaviour
 { 
@@ -11,6 +12,6 @@ public class RespawnController : MonoBehaviour
         player.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
 
         BodyHealthManager bhm = player.GetComponent<BodyHealthManager>();
-        bhm.currentHealth = bhm.maxHealth;
+        bhm.Start();
     }
 }
