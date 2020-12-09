@@ -13,11 +13,11 @@ public class BodyHealthManager : MonoBehaviour
     {
         currentHealth = StaticValues.ActualLife;
         if (StaticValues.ActualLife <= 0) {
-            currentHealth = maxHealth;
+            currentHealth = 30;
         }
         anim = GetComponent<Animator>();
         audioSource = GameObject.FindGameObjectWithTag("Source");
-        PlayerPrefs.SetInt("maxHealth", maxHealth);
+        PlayerPrefs.SetInt("maxHealth", 30);
     }
 
     public void HurtBody(int damage)
