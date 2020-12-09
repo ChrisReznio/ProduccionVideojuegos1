@@ -78,6 +78,7 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
+        StaticValues.ActualLife = PlayerPrefs.GetInt("maxHealth");
         Application.LoadLevel(Application.loadedLevel);
         DeactivateMenuUI();
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwitchToSoul : MonoBehaviour
 {
@@ -77,5 +78,6 @@ public class SwitchToSoul : MonoBehaviour
 
     void RespawnBody() {
         body.GetComponent<RespawnController>().Respawn();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
