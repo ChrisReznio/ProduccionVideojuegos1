@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class StaticValues 
 {
-    private static int actualLife = 50;
+    private static int actualLife = 30;
 
     public static int ActualLife
     {
