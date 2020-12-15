@@ -30,6 +30,13 @@ public class UpdatedSharkController : MonoBehaviour
 
     void Update()
     {
+        if (PauseMenu.isPaused)
+        {
+            myRigidBody.velocity = Vector2.zero;
+            animator.speed = 0;
+            return;
+        }
+        animator.speed = 1;
         myRigidBody.velocity = Vector2.zero;
         if (body.GetComponent<BodyController>().canBeDamaged)
         {

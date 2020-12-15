@@ -55,8 +55,11 @@ public class BodyController : MonoBehaviour
         
         if (PauseMenu.isPaused)
         {
+            myRigidbody.velocity = Vector2.zero;
+            anim.speed = 0;
             return;
         }
+        anim.speed = 1;
         if (anim.GetBool("Dying"))
         {
             myRigidbody.velocity = Vector2.zero;
