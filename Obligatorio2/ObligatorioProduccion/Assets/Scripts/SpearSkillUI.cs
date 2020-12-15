@@ -22,10 +22,13 @@ public class SpearSkillUI : MonoBehaviour
         }
         if (isInCooldown)
         {
-            imageCooldown.fillAmount += 1 / cooldown * Time.deltaTime;
-            if(imageCooldown.fillAmount >= 1)
+            if (!PauseMenu.isPaused)
             {
-                isInCooldown = false;
+                imageCooldown.fillAmount += 1 / cooldown * Time.deltaTime;
+                if (imageCooldown.fillAmount >= 1)
+                {
+                    isInCooldown = false;
+                }
             }
         }
     }
