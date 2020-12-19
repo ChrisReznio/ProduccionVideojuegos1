@@ -3845,6 +3845,7 @@ MonoBehaviour:
   completeHeartSprite: {fileID: 21300000, guid: 185c1a346c4f15246b3e525098a52b69, type: 3}
   halfHeartSprite: {fileID: 21300000, guid: b1709013526b4754596a0643219b8511, type: 3}
   bodyHealthManager: {fileID: 30686696}
+  canvas: {fileID: 1207336349}
 --- !u!1 &974339039
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class HeartsUI : MonoBehaviour
     public Sprite completeHeartSprite;
     public Sprite halfHeartSprite;
     public BodyHealthManager bodyHealthManager;
+    public GameObject canvas;
 
     void Update()
     {
@@ -27,6 +28,7 @@ public class HeartsUI : MonoBehaviour
         heartGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(68, 59);
 
         Image heartImage = heartGameObject.GetComponent<Image>();
+        heartImage.transform.SetParent(canvas.transform);
         heartImage.sprite = heartSprite;
 
         return heartImage;
@@ -50,6 +52,7 @@ public class HeartsUI : MonoBehaviour
         faceGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(960, 540);
 
         Image faceImage = faceGameObject.GetComponent<Image>();
+        faceImage.transform.SetParent(canvas.transform);
         faceImage.sprite = face;
 
         return faceImage;
