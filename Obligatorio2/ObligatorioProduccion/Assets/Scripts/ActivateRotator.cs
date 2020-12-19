@@ -28,7 +28,7 @@ public class ActivateRotator : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (waitCounter==0 && Input.GetKey(KeyCode.Z) && rotator != null && RotatorIsInRange(rotator))
+        if (waitCounter==0 && Input.GetKey(KeyCode.V) && rotator != null && RotatorIsInRange(rotator))
         {
             Vector3 position = rotator.transform.parent.gameObject.transform.position;
             Vector3 bodyPosition = body.transform.position;
