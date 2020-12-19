@@ -93,7 +93,7 @@ public class BodyController : MonoBehaviour
                     anim.SetFloat("LastMoveX", lastMove.x);
                     anim.SetFloat("LastMoveY", lastMove.y);
                 }
-                if(Input.GetKeyDown(KeyCode.J))
+                if(Input.GetKeyDown(KeyCode.Z))
                 {
                     attackTimeCounter = attackTime;
                     attacking =  true;
@@ -101,14 +101,14 @@ public class BodyController : MonoBehaviour
                     audioSource.GetComponent<AudioController>().Swing();
                     anim.SetBool("PlayerAttacking", true);
 
-                }else if(Input.GetKeyDown(KeyCode.K) && throwSpearInterCooldown <= 0){
+                }else if(Input.GetKeyDown(KeyCode.X) && throwSpearInterCooldown <= 0){
                     anim.SetBool("ThrowingSpear", true);
                     audioSource.GetComponent<AudioController>().Throw();
                     throwSpearInterCooldown = skillThrowSpearCooldown;
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.L) && dashInternCooldown <= 0)
+            if (Input.GetKeyDown(KeyCode.C) && dashInternCooldown <= 0)
             {
                 audioSource.GetComponent<AudioController>().Dash();
                 actualDashRange = 0;

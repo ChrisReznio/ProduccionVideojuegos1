@@ -1725,19 +1725,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Movement         WASD
+  m_Text: 'Movement         Arrows
 
-    Detach/Attach           X
+    Detach/Attach        F
 
-    Interact                    
-    Z
+    Interact                 
+    V
 
-    Basic Attack              J
+    Basic Attack           Z
 
-    Javelin Toss              K
+    Javelin Toss           X
 
-    Dodge                      
-    L'
+    Dash                    
+    C'
 --- !u!222 &762440863
 CanvasRenderer:
   m_ObjectHideFlags: 0

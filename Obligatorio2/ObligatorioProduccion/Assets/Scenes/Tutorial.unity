@@ -1556,8 +1556,8 @@ MonoBehaviour:
     sentences:
     - There is an ENEMY ahead!, they will target your BODY, so be sure you dont shift
       to your SOUL while fighting!
-    - Try to kill him with your BODY attacks! Swing your spear with J, throw it with
-      K, and dash to safety with L
+    - Try to kill him with your BODY attacks! Swing your spear with Z, throw it with
+      X, and dash to safety with C
 --- !u!61 &1011899379
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1900,7 +1900,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: J
+  m_Text: Z
 --- !u!222 &1089527855
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2118,7 +2118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: X
+  m_Text: F
 --- !u!222 &1250699123
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   dialog:
     sentences:
     - 'There is a BLUE BUTTON over the wooden platform, you can PRESS BUTTONS with
-      the Z key, try and see if you can create a path. '
+      the V key, try and see if you can create a path. '
 --- !u!61 &1307831850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2915,9 +2915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'L
-
-'
+  m_Text: C
 --- !u!222 &1673731751
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3581,8 +3579,8 @@ MonoBehaviour:
     sentences:
     - 'You have formed a link between your soul and that body. In this world such
       links are called lifelines. '
-    - You can PRESS X to take SOUL form and PRESS X AGAIN to return to your BODY.
-    - You can move both your SOUL or BODY with WASD or the ARROW KEYS.
+    - You can PRESS F to take SOUL form and PRESS F AGAIN to return to your BODY.
+    - You can move both your SOUL or BODY with the ARROW KEYS.
 --- !u!1 &2065114898
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,7 +3651,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: K
+  m_Text: X
 --- !u!222 &2065114901
 CanvasRenderer:
   m_ObjectHideFlags: 0
