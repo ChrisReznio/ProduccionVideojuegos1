@@ -10,6 +10,7 @@ public class MainMenuController : MonoBehaviour
     public void Start()
     {
         PlayerPrefs.SetFloat("volume", 0);
+        StaticValues.ActualLife = PlayerPrefs.GetInt("maxHealth");
     }
     public void PlayGame() 
     {
