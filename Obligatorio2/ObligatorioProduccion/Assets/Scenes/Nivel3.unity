@@ -227,7 +227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30563533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.76, y: 1.86, z: 0}
+  m_LocalPosition: {x: -0.82, y: 9.12, z: 0}
   m_LocalScale: {x: 1, y: 4.8111, z: 1}
   m_Children: []
   m_Father: {fileID: 276624120}
@@ -247,7 +247,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - Seems like this is the last maze but the hardest so far. Will we be okay?
+    - Seems like this is the last maze so it might be the hardest one so far. Will
+      we be okay?
 --- !u!61 &30563536
 BoxCollider2D:
   m_ObjectHideFlags: 0
