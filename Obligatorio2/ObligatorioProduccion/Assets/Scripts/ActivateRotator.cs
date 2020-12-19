@@ -28,6 +28,14 @@ public class ActivateRotator : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (rotator != null && RotatorIsInRange(rotator) && rotator.GetComponent<Animator>().GetBool("Active"))
+        {
+            HUDInteraction.canInteract = true;
+        }
+        else
+        {
+            HUDInteraction.canInteract = false;
+        }
         if (waitCounter==0 && Input.GetKey(KeyCode.V) && rotator != null && RotatorIsInRange(rotator))
         {
             Vector3 position = rotator.transform.parent.gameObject.transform.position;
