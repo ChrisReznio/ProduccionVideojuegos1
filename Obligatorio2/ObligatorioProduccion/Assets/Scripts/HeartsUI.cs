@@ -10,6 +10,7 @@ public class HeartsUI : MonoBehaviour
     public Sprite completeHeartSprite;
     public Sprite halfHeartSprite;
     public BodyHealthManager bodyHealthManager;
+    public Image faceUI;
 
     void Update()
     {
@@ -32,7 +33,7 @@ public class HeartsUI : MonoBehaviour
         return heartImage;
     }
 
-    private Image AddFaceToUI(Sprite face)
+    private void AddFaceToUI(Sprite face)
     {
         foreach (Transform child in transform)
         {
@@ -41,18 +42,7 @@ public class HeartsUI : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-        GameObject faceGameObject = new GameObject("Face", typeof(Image));
-
-        faceGameObject.transform.SetParent(transform);
-        faceGameObject.transform.localPosition = Vector3.zero;
-
-        faceGameObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(450, -220);
-        faceGameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(960, 540);
-
-        Image faceImage = faceGameObject.GetComponent<Image>();
-        faceImage.sprite = face;
-
-        return faceImage;
+        faceUI.sprite = face;
     }
 
     private void TranslateHealthToHearts()
