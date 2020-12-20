@@ -3840,8 +3840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d29160f67c39d14a8789c09b209f773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maiaFaceSprite: {fileID: 21300000, guid: 3df7b9632bbfc1a4e88b3b0345e14afc, type: 3}
-  bodyFaceSprite: {fileID: 21300000, guid: e56904f4d61de9846bfb818dc882b3cc, type: 3}
+  maiaFaceSprite: {fileID: 21300000, guid: b85102f7fe55c8d418214a3f865420d3, type: 3}
+  bodyFaceSprite: {fileID: 21300000, guid: 044c93fda5273a242b494f4fe7c9f7b9, type: 3}
   completeHeartSprite: {fileID: 21300000, guid: 185c1a346c4f15246b3e525098a52b69, type: 3}
   halfHeartSprite: {fileID: 21300000, guid: b1709013526b4754596a0643219b8511, type: 3}
   bodyHealthManager: {fileID: 30686696}
