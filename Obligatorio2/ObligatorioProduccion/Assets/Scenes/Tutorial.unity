@@ -1007,7 +1007,6 @@ Transform:
   - {fileID: 1977325973}
   - {fileID: 1356631291}
   - {fileID: 1011899380}
-  - {fileID: 1307831851}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1630,7 +1629,7 @@ MonoBehaviour:
   dialog:
     sentences:
     - There is an ENEMY ahead!, they will target your BODY, so be sure you dont shift
-      to your SOUL while fighting!
+      to your SPIRIT while fighting!
     - Try to kill him with your BODY attacks! Swing your spear with Z, throw it with
       X, and dash to safety with C
 --- !u!61 &1011899379
@@ -2203,80 +2202,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250699120}
   m_CullTransparentMesh: 0
---- !u!1 &1307831848
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1307831851}
-  - component: {fileID: 1307831850}
-  - component: {fileID: 1307831849}
-  m_Layer: 11
-  m_Name: Tutorial5
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1307831849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307831848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de6aca9448ac47943bcf7bf0b1635708, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialog:
-    sentences:
-    - 'There is a BLUE BUTTON over the wooden platform, you can PRESS BUTTONS with
-      the V key, try and see if you can create a path. '
---- !u!61 &1307831850
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307831848}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &1307831851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1307831848}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: 1.5422479, z: 0}
-  m_LocalScale: {x: 1, y: 4.8111, z: 1}
-  m_Children: []
-  m_Father: {fileID: 557354692}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1356631288
 GameObject:
   m_ObjectHideFlags: 0
@@ -2310,9 +2235,9 @@ MonoBehaviour:
   dialog:
     sentences:
     - RED COLOUR, like the shell before, indicates that only your BODY may interact
-      with that object. Your SOUL will go right through.
+      with that object. Your SPIRIT will go right through.
     - But now we have a BLUE HOLE ahead. BLUE OBJECTS may interact only with your
-      SOUL!
+      SPIRIT!
     - Be careful, make the wrong move and you will need to RESTART the level.
 --- !u!61 &1356631290
 BoxCollider2D:
@@ -3806,11 +3731,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 'You have formed a link between soul and body. In this world such links are
-      called lifelines. '
-    - As Maia, the guide spirit, your purpouse is to help people overcome their hell
-      and find the exit.
-    - You can PRESS F to take SOUL form and PRESS F AGAIN to return to your BODY.
+    - Your BODY is trapped in this underwater hell. In order to help you escape,
+      Maia the SPIRIT has formed a link with your body.
+    - Switch between BODY and SPIRIT by PRESSING F to overcome puzzles and find the
+      exit.
 --- !u!1 &2035106710
 GameObject:
   m_ObjectHideFlags: 0
